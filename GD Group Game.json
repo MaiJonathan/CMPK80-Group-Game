@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 257,
+    "build": 258,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -105,6 +105,22 @@
         "name": "cube2.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/cube.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "cube",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/cube2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "cube2",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -137,7 +153,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4481978045410365,
+        "zoomFactor": 0.4950840073748899,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -149,14 +165,14 @@
           "angle": 90,
           "customSize": true,
           "depth": 1,
-          "height": 1678,
+          "height": 1748,
           "keepRatio": true,
           "layer": "",
           "name": "Large_Block_Narrow_Rectangle",
           "persistentUuid": "a18d044e-eae7-43e1-b662-893c56371a54",
           "width": 64,
-          "x": 649,
-          "y": -135,
+          "x": 614,
+          "y": -170,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -171,9 +187,43 @@
           "name": "Player",
           "persistentUuid": "66befc32-58c7-4d36-83c0-66acfd21ead2",
           "width": 100,
-          "x": 165,
-          "y": 469,
+          "x": 204,
+          "y": 240,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 91,
+          "customSize": true,
+          "depth": 1,
+          "height": 162,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Large_Block_Narrow_Rectangle",
+          "persistentUuid": "b21118dc-d02d-447b-99d3-98c4f565c2ae",
+          "width": 40,
+          "x": 471,
+          "y": 446,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 89,
+          "customSize": true,
+          "depth": 1,
+          "height": 162,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Large_Block_Narrow_Rectangle",
+          "persistentUuid": "4ccdf4ad-f489-4baa-8035-d613d71dac5c",
+          "width": 40,
+          "x": 841,
+          "y": 328,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -269,10 +319,43 @@
               "name": "LastY",
               "type": "number",
               "value": 0
+            },
+            {
+              "name": "IsFalling",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "WasOnFloor",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "WasMoving",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "JumpsLeft",
+              "type": "number",
+              "value": 0
             }
           ],
           "effects": [],
           "behaviors": [
+            {
+              "isFolded": true,
+              "name": "AdvancedJump",
+              "type": "AdvancedJump::AdvancedJump",
+              "PlatformerBehavior": "PlatformerObject",
+              "CoyoteTimeFrameDuration": 0.25,
+              "CanCoyoteJump": false,
+              "WasInTheAir": false,
+              "AirJumpCountMaximum": 1,
+              "AreFloorJumpCountedAsAirJump": false,
+              "AirJumpCount": 0,
+              "WasJumpKeyReleased": false
+            },
             {
               "isFolded": true,
               "name": "DiveDash",
@@ -285,18 +368,19 @@
               "IsDiving": false
             },
             {
+              "isFolded": true,
               "name": "HorizontalDash",
               "type": "AdvancedJump::HorizontalDash",
               "PlatformerCharacter": "PlatformerObject",
               "PlatformerConfigurationStack": "PlatformerConfigurationStack",
-              "DashInitialSpeed": 1000,
-              "DashSustainDurationMin": 0.2,
+              "DashInitialSpeed": 600,
+              "DashSustainDurationMin": 0,
               "DashSustainDurationMax": 0.5,
               "DashSustainAcceleration": 3000,
               "DashSustainSpeedMax": 1000,
               "DashSustainGravity": 0,
               "DashDecceleration": 3000,
-              "DashGravity": 997,
+              "DashGravity": 1000,
               "CoolDownDuration": 0.25,
               "LastDirectionIsLeft": false,
               "DashKeyIsPressed": false,
@@ -310,19 +394,19 @@
               "PlatformerCharacter": "PlatformerObject"
             },
             {
-              "acceleration": 30000,
+              "gravity": 1000,
+              "ignoreDefaultControls": true,
               "jumpSpeed": 800,
+              "jumpSustainTime": 0.1,
+              "maxFallingSpeed": 700,
               "name": "PlatformerObject",
               "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "acceleration": 30000,
               "deceleration": 30000,
-              "gravity": 1000,
-              "maxFallingSpeed": 700,
               "maxSpeed": 500,
               "canGoDownFromJumpthru": true,
               "canGrabPlatforms": false,
               "canGrabWithoutMoving": true,
-              "ignoreDefaultControls": false,
-              "jumpSustainTime": 0.2,
               "ladderClimbingSpeed": 150,
               "slopeMaxAngle": 60,
               "useLegacyTrajectory": false,
@@ -331,6 +415,7 @@
               "yGrabOffset": 0
             },
             {
+              "isFolded": true,
               "name": "RemapForPlatformer",
               "type": "BehaviorRemapper::RemapForPlatformer",
               "Up": "w",
@@ -339,20 +424,25 @@
               "Right": "d",
               "Jump": "Space",
               "Platformer": "PlatformerObject"
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
             }
           ],
           "animations": [
             {
-              "name": "",
+              "name": "cube",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "cube.png",
+                      "image": "cube2",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -431,7 +521,7 @@
           "rendererParam1": 1,
           "rendererParam2": 1,
           "rendererType": "Quad",
-          "tank": 15,
+          "tank": 5,
           "textureParticleName": "PixelTrail.png",
           "type": "ParticleSystem::ParticleEmitter",
           "zoneRadius": 4,
@@ -525,6 +615,18 @@
       },
       "events": [
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Player Movement"
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -562,6 +664,257 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"LShift\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AdvancedJump::HorizontalDash::SimulateDashKey"
+              },
+              "parameters": [
+                "Player",
+                "HorizontalDash",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AdvancedJump::AdvancedJump::SetAirJumpCountMaximum"
+              },
+              "parameters": [
+                "Player",
+                "AdvancedJump",
+                "Player.JumpsLeft+1",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"s\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AdvancedJump::DiveDash::SimulateDiveKey"
+              },
+              "parameters": [
+                "Player",
+                "DiveDash",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::IsOnFloor"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "JumpsLeft",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "Player",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetY"
+              },
+              "parameters": [
+                "Player",
+                "Scale",
+                "=",
+                "1 -abs(Player.PlatformerObject::CurrentSpeed())/2000"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetX"
+              },
+              "parameters": [
+                "Player",
+                "Scale",
+                "=",
+                "1 + abs(Player.PlatformerObject::CurrentSpeed())/2000"
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AdvancedJump::HorizontalDash::IsDashing"
+              },
+              "parameters": [
+                "Player",
+                "HorizontalDash",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Space\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AdvancedJump::HorizontalDash::AbortDash"
+              },
+              "parameters": [
+                "Player",
+                "HorizontalDash",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Space\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::IsJumping"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"r\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Player",
+                "\"255;255;255\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Player",
+                "\"221;0;0\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "PlayerTrail and Dash effect"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "PlayerTrail on floor movement"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -684,30 +1037,16 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"LShift\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AdvancedJump::HorizontalDash::SimulateDashKey"
-              },
-              "parameters": [
-                "Player",
-                "HorizontalDash",
-                ""
-              ]
-            }
-          ]
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Player Trail on jumps"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -718,22 +1057,131 @@
               },
               "parameters": [
                 "",
-                "\"s\""
+                "\"Space\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::IsJumping"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "JumpsLeft",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "PixelTrail",
+                "Player.X()",
+                "Player.Y()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ParticleSystem::EmitterAngle"
+              },
+              "parameters": [
+                "PixelTrail",
+                "=",
+                "Player.movementDirection"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetZOrder"
+              },
+              "parameters": [
+                "PixelTrail",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "JumpsLeft",
+                "-",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::IsJumping"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "AdvancedJump::DiveDash::SimulateDiveKey"
+                "value": "SetXY"
               },
               "parameters": [
-                "Player",
-                "DiveDash",
-                ""
+                "PixelTrail",
+                "=",
+                "Player.X()",
+                "=",
+                "Player.Y()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ParticleSystem::EmitterAngle"
+              },
+              "parameters": [
+                "PixelTrail",
+                "=",
+                "Player.movementDirection"
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Shadow Trail Dash Effect"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -787,8 +1235,8 @@
               "parameters": [
                 "PlayerTrail",
                 "Resizable",
-                "100",
-                "100"
+                "Player.Width()",
+                "Player.Height()"
               ]
             },
             {
@@ -799,6 +1247,16 @@
                 "PlayerTrail",
                 "=",
                 "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "PlayerTrail",
+                "=",
+                "Player.Angle()"
               ]
             }
           ]
@@ -815,7 +1273,7 @@
                 "PlayerTrail",
                 "Opacity",
                 "-",
-                "10"
+                "25"
               ]
             }
           ]
@@ -918,8 +1376,31 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Squish and Stretching"
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "WasOnFloor",
+                "=",
+                ""
+              ]
+            },
             {
               "type": {
                 "value": "PlatformBehavior::IsOnFloor"
@@ -933,12 +1414,341 @@
           "actions": [
             {
               "type": {
-                "value": "SetAngle"
+                "value": "ScalableCapability::ScalableBehavior::SetX"
               },
               "parameters": [
                 "Player",
+                "Scale",
                 "=",
-                "0"
+                "1.3"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetY"
+              },
+              "parameters": [
+                "Player",
+                "Scale",
+                "=",
+                "0.7"
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+              },
+              "parameters": [
+                "Player",
+                "Tween",
+                "\"LandingSquish\"",
+                "1",
+                "\"linear\"",
+                "0.1",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "WasOnFloor",
+                "True",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "PlatformBehavior::IsOnFloor"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "WasOnFloor",
+                "False",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::IsJumping"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "Player",
+                "Scale",
+                "=",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::IsOnFloor"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "WasMoving",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::CurrentSpeed"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject",
+                    "<",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::CurrentSpeed"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject",
+                    ">",
+                    "-10"
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "WasMoving",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetX"
+              },
+              "parameters": [
+                "Player",
+                "Scale",
+                "=",
+                "0.7"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetY"
+              },
+              "parameters": [
+                "Player",
+                "Scale",
+                "=",
+                "1.3"
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+              },
+              "parameters": [
+                "Player",
+                "Tween",
+                "\"easeOut\"",
+                "1",
+                "\"linear\"",
+                "0.1",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::CurrentSpeed"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject",
+                    "<",
+                    "-10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::CurrentSpeed"
+                  },
+                  "parameters": [
+                    "Player",
+                    "PlatformerObject",
+                    ">",
+                    "10"
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "WasMoving",
+                "True",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AdvancedJump::HorizontalDash::IsDashing"
+              },
+              "parameters": [
+                "Player",
+                "HorizontalDash",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetX"
+              },
+              "parameters": [
+                "Player",
+                "Scale",
+                "=",
+                "1.4"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetY"
+              },
+              "parameters": [
+                "Player",
+                "Scale",
+                "=",
+                "0.6"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::IsFalling"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "AdvancedJump::HorizontalDash::IsDashing"
+              },
+              "parameters": [
+                "Player",
+                "HorizontalDash",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "Player",
+                "Scale",
+                "=",
+                "1"
               ]
             }
           ]
@@ -1012,6 +1822,10 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "AdvancedJump",
+          "type": "AdvancedJump::AdvancedJump"
+        },
         {
           "name": "Animation",
           "type": "AnimatableCapability::AnimatableBehavior"
