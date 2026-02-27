@@ -243,6 +243,56 @@
         "name": "worm3.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "WormBody1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WormBody1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "WormTail.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WormTail.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "wormHead.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "wormHead.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/wormHead.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "wormHead",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "portal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "portal.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Worm8bit ver2.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Worm8bit ver2.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
@@ -275,7 +325,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6672773998330015,
+        "zoomFactor": 0.6897782140104549,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -286,6 +336,11 @@
           "name": "BossStage",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "BossDefeated",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -518,14 +573,13 @@
           "effects": [],
           "behaviors": [
             {
-              "isFolded": true,
               "name": "AdvancedJump",
               "type": "AdvancedJump::AdvancedJump",
               "PlatformerBehavior": "PlatformerObject",
               "CoyoteTimeFrameDuration": 0.25,
               "CanCoyoteJump": false,
               "WasInTheAir": false,
-              "AirJumpCountMaximum": 1,
+              "AirJumpCountMaximum": 3,
               "AreFloorJumpCountedAsAirJump": false,
               "AirJumpCount": 0,
               "WasJumpKeyReleased": false
@@ -1236,7 +1290,7 @@
             {
               "name": "SegmentIndex",
               "type": "number",
-              "value": 0
+              "value": 1
             }
           ],
           "effects": [],
@@ -1252,12 +1306,60 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "worm.png",
+                      "image": "WormBody1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
                         "x": 0,
                         "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Tail",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "WormTail.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -1309,6 +1411,11 @@
               "type": "structure",
               "children": [
                 {
+                  "name": "Angle",
+                  "type": "structure",
+                  "children": []
+                },
+                {
                   "name": "X",
                   "type": "structure",
                   "children": []
@@ -1323,12 +1430,54 @@
             {
               "name": "BodyCounter",
               "type": "number",
+              "value": -1
+            },
+            {
+              "name": "FinishedGenerating",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "BodySpacing",
+              "type": "number",
+              "value": 10
+            },
+            {
+              "name": "Bodies",
+              "type": "number",
+              "value": 10
+            },
+            {
+              "name": "Speed",
+              "type": "number",
+              "value": 200
+            },
+            {
+              "name": "BossState",
+              "type": "string",
+              "value": "None"
+            },
+            {
+              "name": "OrbitAngle",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "OrbitRadius",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "TargetOrbitAngle",
+              "type": "number",
               "value": 0
             }
           ],
           "effects": [],
           "behaviors": [
             {
+              "name": "TopDownMovement",
+              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 400,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -1338,25 +1487,24 @@
               "ignoreDefaultControls": false,
               "maxSpeed": 200,
               "movementAngleOffset": 0,
-              "name": "TopDownMovement",
               "rotateObject": true,
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "useLegacyTurnBack": false,
               "viewpoint": "TopDown"
             }
           ],
           "animations": [
             {
-              "name": "",
+              "name": "wormHead",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "worm2.png",
+                      "image": "wormHead",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1399,7 +1547,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "WormTail",
+          "name": "portal",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -1416,12 +1564,12 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "worm3.png",
+                      "image": "portal.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 32,
+                        "y": 32
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -1497,7 +1645,7 @@
             "objectName": "WormHead"
           },
           {
-            "objectName": "WormTail"
+            "objectName": "portal"
           }
         ]
       },
@@ -1577,7 +1725,7 @@
                     "Player",
                     "JumpsLeft",
                     "=",
-                    "2"
+                    "4"
                   ]
                 },
                 {
@@ -3074,7 +3222,6 @@
           "comment": "Boss Attacks"
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -3436,6 +3583,7 @@
               "comment": "Boss Logic"
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3481,6 +3629,7 @@
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3497,6 +3646,7 @@
               "actions": []
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3544,6 +3694,7 @@
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3591,6 +3742,7 @@
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3736,6 +3888,7 @@
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3764,6 +3917,7 @@
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -3808,9 +3962,10 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Boss movement"
+          "comment": "Boss movement (Old Version, Remove later but keeping since I want to copy and paste the same actions)"
         },
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -3823,28 +3978,6 @@
                 "AngleToPlayer",
                 "=",
                 "AngleBetweenPositions(WormHead.X(),WormHead.Y(),Player.X(),Player.Y())"
-              ]
-            },
-            {
-              "type": {
-                "value": "RotateTowardAngle"
-              },
-              "parameters": [
-                "WormHead",
-                "WormHead.AngleToPlayer-90",
-                "0",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "WormHead",
-                "WormHead.AngleToPlayer",
-                "300",
-                ""
               ]
             },
             {
@@ -3866,10 +3999,43 @@
                 "History.Y",
                 "WormHead.Y()"
               ]
+            },
+            {
+              "type": {
+                "value": "PushNumberToObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "History.Angle",
+                "WormHead.Angle()"
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceAL"
+              },
+              "parameters": [
+                "WormHead",
+                "WormHead.AngleToPlayer",
+                "WormHead.Speed",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "RotateTowardAngle"
+              },
+              "parameters": [
+                "WormHead",
+                "WormHead.AngleToPlayer-90",
+                "0",
+                ""
+              ]
             }
           ],
           "events": [
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3880,7 +4046,7 @@
                     "WormHead",
                     "History.X",
                     ">",
-                    "200"
+                    "(WormHead.Bodies)*WormHead.BodySpacing"
                   ]
                 }
               ],
@@ -3904,10 +4070,21 @@
                     "History.Y",
                     "0"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectVariableRemoveAt"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "History.Angle",
+                    "0"
+                  ]
                 }
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3917,6 +4094,17 @@
                   "parameters": [
                     "",
                     "\"v\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "WormHead",
+                    "=",
+                    "0"
                   ]
                 }
               ],
@@ -3936,8 +4124,9 @@
               ],
               "events": [
                 {
+                  "disabled": true,
                   "type": "BuiltinCommonInstructions::Repeat",
-                  "repeatExpression": "20",
+                  "repeatExpression": "WormHead.Bodies",
                   "conditions": [],
                   "actions": [
                     {
@@ -3973,12 +4162,53 @@
                         "=",
                         "WormHead.BodyCounter"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetZOrder"
+                      },
+                      "parameters": [
+                        "WormBody",
+                        "=",
+                        "WormHead.ZOrder()-1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormBody",
+                        "SegmentIndex",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                      },
+                      "parameters": [
+                        "WormBody",
+                        "Animation",
+                        "=",
+                        "1"
+                      ]
                     }
                   ]
                 }
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3989,7 +4219,18 @@
                     "WormHead",
                     "History.X",
                     ">=",
-                    "200"
+                    "(WormBody.SegmentIndex)*WormHead.BodySpacing"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectVariableChildCount"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "History.Y",
+                    ">=",
+                    "(WormBody.SegmentIndex)*WormHead.BodySpacing"
                   ]
                 }
               ],
@@ -4001,7 +4242,7 @@
                   "parameters": [
                     "WormBody",
                     "=",
-                    "WormHead.History.X[WormBody.SegmentIndex*10]"
+                    "WormHead.History.X[(WormBody.SegmentIndex)*WormHead.BodySpacing]"
                   ]
                 },
                 {
@@ -4011,16 +4252,7 @@
                   "parameters": [
                     "WormBody",
                     "=",
-                    "WormHead.History.Y[WormBody.SegmentIndex*10]"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "Player",
-                    "\"189;16;224\""
+                    "WormHead.History.Y[(WormBody.SegmentIndex)*WormHead.BodySpacing]"
                   ]
                 },
                 {
@@ -4029,7 +4261,883 @@
                   },
                   "parameters": [
                     "WormBody",
-                    "20",
+                    "2000",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Boss Spawning"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Hide"
+              },
+              "parameters": [
+                "Boss"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "AngleToPlayer",
+                "=",
+                "AngleBetweenPositions(WormHead.X(),WormHead.Y(),Player.X(),Player.Y())"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"l\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "portal",
+                    "700",
+                    "350",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Worm8bit ver2.mp3",
+                    "",
+                    "5",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "\"IntroTimer\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"IntroTimer\"",
+                    ">",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "WormHead",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "BossDefeated",
+                    "=",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "WormHead",
+                    "portal.X()",
+                    "portal.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "=",
+                    "portal.ZOrder()+1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"Emerging\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"IntroTimer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "=",
+                    "-90"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "0",
+                    "-WormHead.Speed",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RotateTowardAngle"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "180",
+                    "0",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "!=",
+                    "\"Emerging\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PushNumberToObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "History.X",
+                    "WormHead.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PushNumberToObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "History.Y",
+                    "WormHead.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PushNumberToObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "History.Angle",
+                    "WormHead.Angle()"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableChildCount"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "History.X",
+                        ">=",
+                        "(WormBody.SegmentIndex)*WormHead.BodySpacing"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableChildCount"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "History.Y",
+                        ">=",
+                        "(WormBody.SegmentIndex)*WormHead.BodySpacing"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "WormBody",
+                        "=",
+                        "WormHead.History.X[(WormBody.SegmentIndex)*WormHead.BodySpacing]"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "WormBody",
+                        "=",
+                        "WormHead.History.Y[(WormBody.SegmentIndex)*WormHead.BodySpacing]"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Rotate"
+                      },
+                      "parameters": [
+                        "WormBody",
+                        "2000",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableChildCount"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "History.X",
+                        ">",
+                        "(WormHead.Bodies)*WormHead.BodySpacing"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableRemoveAt"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "History.X",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableRemoveAt"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "History.Y",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableRemoveAt"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "History.Angle",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Segment Spawning"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"IntroTimer\"",
+                    ">=",
+                    "(WormHead.BodySpacing*4)/WormHead.Speed"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "FinishedGenerating",
+                    "=",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "WormBody",
+                    "portal.X()",
+                    "portal.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BodyCounter",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormBody",
+                    "SegmentIndex",
+                    "=",
+                    "WormHead.BodyCounter"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetZOrder"
+                  },
+                  "parameters": [
+                    "WormBody",
+                    "=",
+                    "WormHead.ZOrder()-1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "WormBody",
+                    "0",
+                    "-WormHead.Speed",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"IntroTimer\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormBody",
+                        "SegmentIndex",
+                        "=",
+                        "WormHead.Bodies-1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "FinishedGenerating",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "BossState",
+                        "=",
+                        "\"ToOrbit\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "OrbitAngle",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "OrbitRadius",
+                        "=",
+                        "400"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"IntroTimer\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "portal",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Going into orbit"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "BossState",
+                "=",
+                "\"ToOrbit\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ClearForces"
+              },
+              "parameters": [
+                "WormHead"
+              ]
+            },
+            {
+              "type": {
+                "value": "ClearForces"
+              },
+              "parameters": [
+                "WormBody"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "OrbitAngle",
+                "=",
+                "AngleBetweenPositions(portal.X(), portal.Y(), Player.X(), Player.Y())"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "TargetOrbitAngle",
+                "=",
+                "WormHead.OrbitAngle"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "OrbitRadius",
+                "=",
+                "300"
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceTowardObject"
+              },
+              "parameters": [
+                "WormHead",
+                "Player",
+                "WormHead.Speed",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "OrbitAngle",
+                "=",
+                "-90"
+              ]
+            },
+            {
+              "type": {
+                "value": "RotateTowardAngle"
+              },
+              "parameters": [
+                "WormHead",
+                "WormHead.AngleToPlayer-90",
+                "0",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "Player",
+                    "WormHead.OrbitRadius",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"Orbit\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "In Orbit"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "BossState",
+                "=",
+                "\"Orbit\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "OrbitAngle",
+                "+",
+                "2*TimeDelta()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "WormHead",
+                "=",
+                "Player.X() + cos(WormHead.OrbitAngle) * WormHead.OrbitRadius\n"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "WormHead",
+                "=",
+                "Player.Y() + sin(WormHead.OrbitAngle) * WormHead.OrbitRadius"
+              ]
+            },
+            {
+              "type": {
+                "value": "RotateTowardAngle"
+              },
+              "parameters": [
+                "WormHead",
+                "WormHead.AngleToPlayer-90",
+                "0",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"v\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"Follow\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "BossState",
+                "=",
+                "\"Follow\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AddForceAL"
+              },
+              "parameters": [
+                "WormHead",
+                "WormHead.AngleToPlayer",
+                "WormHead.Speed",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "RotateTowardAngle"
+              },
+              "parameters": [
+                "WormHead",
+                "WormHead.AngleToPlayer-90",
+                "0",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "Speed",
+                "=",
+                "400"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"b\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "WormBody",
                     ""
                   ]
                 }
