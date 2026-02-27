@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 257,
+    "build": 258,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -185,6 +185,46 @@
         "name": "NewSprite5",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "ChatGPT Image Feb 26, 2026, 11_53_00 PM.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ChatGPT Image Feb 26, 2026, 11_53_00 PM.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "ChatGPT Image Feb 26, 2026, 11_53_00 PM2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ChatGPT Image Feb 26, 2026, 11_53_00 PM2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "blue orb.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "blue orb.jpg",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Gemini_Generated_Image_gxf8dpgxf8dpgxf8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Gemini_Generated_Image_gxf8dpgxf8dpgxf8.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "ChatGPT Image Feb 26, 2026, 04_27_53 AM2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ChatGPT Image Feb 26, 2026, 04_27_53 AM2.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -217,7 +257,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.36732575450588323,
+        "zoomFactor": 0.4950840073748919,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -643,7 +683,7 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Boss",
           "type": "Sprite",
@@ -694,20 +734,68 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 101,
-                            "y": 122
+                            "x": 235,
+                            "y": 594
                           },
                           {
-                            "x": 922,
-                            "y": 122
+                            "x": 75.5,
+                            "y": 503
                           },
                           {
-                            "x": 922,
-                            "y": 866
+                            "x": 238.5,
+                            "y": 388
                           },
                           {
-                            "x": 101,
-                            "y": 866
+                            "x": 197,
+                            "y": 220.5
+                          },
+                          {
+                            "x": 406.5,
+                            "y": 212.5
+                          },
+                          {
+                            "x": 504.5,
+                            "y": 99
+                          },
+                          {
+                            "x": 627.5,
+                            "y": 245
+                          },
+                          {
+                            "x": 827.5,
+                            "y": 214.5
+                          },
+                          {
+                            "x": 787,
+                            "y": 390.5
+                          },
+                          {
+                            "x": 942,
+                            "y": 503
+                          },
+                          {
+                            "x": 772,
+                            "y": 603.5
+                          },
+                          {
+                            "x": 824,
+                            "y": 785
+                          },
+                          {
+                            "x": 613.5,
+                            "y": 734
+                          },
+                          {
+                            "x": 511.5,
+                            "y": 895
+                          },
+                          {
+                            "x": 392.5,
+                            "y": 751.5
+                          },
+                          {
+                            "x": 206,
+                            "y": 777
                           }
                         ]
                       ]
@@ -843,19 +931,19 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "BossProjectile",
-          "preScale": 4,
+          "preScale": 0.1,
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
           "behaviors": [
             {
-              "extraBorder": 200,
               "name": "DestroyOutside",
               "type": "DestroyOutsideBehavior::DestroyOutside",
+              "extraBorder": 200,
               "unseenGraceDistance": 10000
             },
             {
@@ -891,17 +979,16 @@
           ],
           "animations": [
             {
-              "name": "NewSprite",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite5",
+                      "image": "ChatGPT Image Feb 26, 2026, 04_27_53 AM2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -917,20 +1004,36 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 27,
-                            "y": 20
+                            "x": 148.5,
+                            "y": 513.5
                           },
                           {
-                            "x": 34,
-                            "y": 20
+                            "x": 430.5,
+                            "y": 439
                           },
                           {
-                            "x": 34,
-                            "y": 27
+                            "x": 617.5,
+                            "y": 312.5
                           },
                           {
-                            "x": 27,
-                            "y": 27
+                            "x": 802.5,
+                            "y": 384
+                          },
+                          {
+                            "x": 904,
+                            "y": 474.5
+                          },
+                          {
+                            "x": 799.5,
+                            "y": 566
+                          },
+                          {
+                            "x": 637,
+                            "y": 627
+                          },
+                          {
+                            "x": 312,
+                            "y": 548.5
                           }
                         ]
                       ]
@@ -1517,6 +1620,18 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": ""
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
