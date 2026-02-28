@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 259,
+    "build": 258,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -308,6 +308,36 @@
         "metadata": "",
         "name": "Point Green2.png",
         "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "glass shatter 2.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "glass shatter 2.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Freezing magic.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Freezing magic.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Fireball magic 2 music.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Fireball magic 2 music.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": false
       }
     ]
@@ -3546,11 +3576,22 @@
                     "0.6",
                     "no"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Freezing magic.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3683,7 +3724,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3760,11 +3800,46 @@
                   "actions": [
                     {
                       "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "WormBeam"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "WormBeam",
+                        "\"lifetime\"",
+                        ">=",
+                        "0.8"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
                         "value": "Delete"
                       },
                       "parameters": [
                         "WormBeam",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "UnloadSound"
+                      },
+                      "parameters": [
+                        "",
+                        "Freezing magic.mp3"
                       ]
                     }
                   ]
@@ -5645,6 +5720,18 @@
                 "Player",
                 "\"255;100;100\""
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "glass shatter 2.mp3",
+                "",
+                "",
+                ""
+              ]
             }
           ]
         },
@@ -5775,6 +5862,18 @@
                 "600",
                 "1"
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Fireball magic 2 music.mp3",
+                "",
+                "",
+                "100"
+              ]
             }
           ]
         },
@@ -5862,6 +5961,18 @@
               "parameters": [
                 "Player",
                 "\"255;100;100\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "glass shatter 2.mp3",
+                "",
+                "",
+                ""
               ]
             }
           ]
@@ -6075,7 +6186,7 @@
               },
               "parameters": [
                 "BossDefeated",
-                "=",
+                "True",
                 "1"
               ]
             },
@@ -6390,7 +6501,6 @@
     {
       "author": "",
       "category": "Input",
-      "dimension": "",
       "extensionNamespace": "",
       "fullName": "Platformer and top-down remapper",
       "gdevelopVersion": ">=5.5.222",
@@ -7744,7 +7854,6 @@
     {
       "author": "",
       "category": "Movement",
-      "dimension": "",
       "extensionNamespace": "",
       "fullName": "Advanced platformer movements",
       "gdevelopVersion": ">=5.5.222",
@@ -14591,7 +14700,6 @@
     {
       "author": "@4ian",
       "category": "Movement",
-      "dimension": "",
       "extensionNamespace": "",
       "fullName": "Bounce (using forces)",
       "gdevelopVersion": ">=5.5.222",
@@ -15183,7 +15291,6 @@
     {
       "author": "@4ian, Entropy, VegeTato",
       "category": "Visual effect",
-      "dimension": "",
       "extensionNamespace": "",
       "fullName": "Flash object",
       "gdevelopVersion": ">=5.5.222",
@@ -18257,7 +18364,6 @@
     {
       "author": "@4ian",
       "category": "Game mechanic",
-      "dimension": "",
       "extensionNamespace": "",
       "fullName": "Fire bullets",
       "gdevelopVersion": ">=5.5.222",
