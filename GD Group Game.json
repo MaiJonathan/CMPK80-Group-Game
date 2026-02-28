@@ -371,7 +371,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.18923010380623106,
+        "zoomFactor": 0.4789341884535308,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -448,8 +448,8 @@
           "name": "Boss",
           "persistentUuid": "ee50c417-59d2-450a-a7f7-f3229ee20c07",
           "width": 211,
-          "x": 538,
-          "y": 192,
+          "x": -499,
+          "y": -153,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -1885,6 +1885,7 @@
           "comment": "Player Movement"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -3431,16 +3432,6 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -3453,6 +3444,7 @@
           "comment": "Boss Attacks"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -4253,6 +4245,7 @@
           "comment": "Boss Spawning"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -4904,140 +4897,321 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Going into orbit around the Player"
+          "comment": "Boss Movement"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "StringObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "BossState",
-                "=",
-                "\"ToOrbit\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ClearForces"
-              },
-              "parameters": [
-                "WormHead"
-              ]
-            },
-            {
-              "type": {
-                "value": "ClearForces"
-              },
-              "parameters": [
-                "WormBody"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetXY"
-              },
-              "parameters": [
-                "Point_Green",
-                "=",
-                "Player.X() + cos(ToRad(WormHead.OrbitAngle)) * WormHead.OrbitRadius\n",
-                "=",
-                "Player.Y() + sin(ToRad(WormHead.OrbitAngle)) * WormHead.OrbitRadius"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "TargetOrbitAngle",
-                "=",
-                "WormHead.OrbitAngle"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "OrbitRadius",
-                "=",
-                "300"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "OrbitAngle",
-                "+",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "WormHead",
-                "+",
-                "5*cos(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetY"
-              },
-              "parameters": [
-                "WormHead",
-                "+",
-                "5*sin(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetAngle"
-              },
-              "parameters": [
-                "WormHead",
-                "=",
-                "AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())-90"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "Debugging_Numbers",
-                "Text",
-                "=",
-                "WormHead.OrbitAngle"
-              ]
-            }
-          ],
+          "conditions": [],
+          "actions": [],
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Going into orbit around the Player"
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"ToOrbit\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ClearForces"
+                  },
+                  "parameters": [
+                    "WormHead"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ClearForces"
+                  },
+                  "parameters": [
+                    "WormBody"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "Point_Green",
+                    "=",
+                    "Player.X() + cos(ToRad(WormHead.OrbitAngle)) * WormHead.OrbitRadius\n",
+                    "=",
+                    "Player.Y() + sin(ToRad(WormHead.OrbitAngle)) * WormHead.OrbitRadius"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "TargetOrbitAngle",
+                    "=",
+                    "WormHead.OrbitAngle"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "OrbitRadius",
+                    "=",
+                    "300"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "OrbitAngle",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "+",
+                    "5*cos(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "+",
+                    "5*sin(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "=",
+                    "AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())-90"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Debugging_Numbers",
+                    "Text",
+                    "=",
+                    "WormHead.OrbitAngle"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "WormHead",
+                        "20",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "BossState",
+                        "=",
+                        "\"Orbit\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "In Orbit"
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "Distance"
+                    "value": "StringObjectVariable"
                   },
                   "parameters": [
-                    "Point_Green",
                     "WormHead",
-                    "20",
+                    "BossState",
+                    "=",
+                    "\"Orbit\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "OrbitAngle",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "=",
+                    "WormHead.OrbitAngle"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "=",
+                    "Player.X() + cos(ToRad(WormHead.OrbitAngle)) * WormHead.OrbitRadius\n"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "=",
+                    "Player.Y() + sin(ToRad(WormHead.OrbitAngle)) * WormHead.OrbitRadius"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Debugging_Numbers",
+                    "Text",
+                    "=",
+                    "WormHead.OrbitAngle"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"Follow\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "WormHead.AngleToPlayer",
+                    "WormHead.Speed",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RotateTowardAngle"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "WormHead.AngleToPlayer-90",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "Speed",
+                    "=",
+                    "400"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"v\""
                   ]
                 }
               ],
@@ -5050,350 +5224,101 @@
                     "WormHead",
                     "BossState",
                     "=",
-                    "\"Orbit\""
+                    "\"Follow\""
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "In Orbit"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+            },
             {
-              "type": {
-                "value": "StringObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "BossState",
-                "=",
-                "\"Orbit\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "OrbitAngle",
-                "+",
-                "1"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"o\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"ToOrbit\""
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "SetAngle"
-              },
-              "parameters": [
-                "WormHead",
-                "=",
-                "WormHead.OrbitAngle"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextJustPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"b\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "WormBody",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "UnloadAllAudio"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RemoveTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"IntroTimer\""
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "SetX"
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
               },
-              "parameters": [
-                "WormHead",
-                "=",
-                "Player.X() + cos(ToRad(WormHead.OrbitAngle)) * WormHead.OrbitRadius\n"
-              ]
+              "comment": "Manually Controlling the Movements"
             },
-            {
-              "type": {
-                "value": "SetY"
-              },
-              "parameters": [
-                "WormHead",
-                "=",
-                "Player.Y() + sin(ToRad(WormHead.OrbitAngle)) * WormHead.OrbitRadius"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "Debugging_Numbers",
-                "Text",
-                "=",
-                "WormHead.OrbitAngle"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextJustPressed"
-              },
-              "parameters": [
-                "",
-                "\"v\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetStringObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "BossState",
-                "=",
-                "\"Follow\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"o\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetStringObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "BossState",
-                "=",
-                "\"ToOrbit\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "StringObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "BossState",
-                "=",
-                "\"Follow\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "WormHead",
-                "WormHead.AngleToPlayer",
-                "WormHead.Speed",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "RotateTowardAngle"
-              },
-              "parameters": [
-                "WormHead",
-                "WormHead.AngleToPlayer-90",
-                "0",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "Speed",
-                "=",
-                "400"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextJustPressed"
-              },
-              "parameters": [
-                "",
-                "\"b\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "WormHead",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "WormBody",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "UnloadAllAudio"
-              },
-              "parameters": [
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "RemoveTimer"
-              },
-              "parameters": [
-                "",
-                "\"IntroTimer\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Manually Controlling the Movements"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "MouseButtonFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"Left\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetStringObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "BossState",
-                "=",
-                "\"Manual\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "StringObjectVariable"
-              },
-              "parameters": [
-                "WormHead",
-                "BossState",
-                "=",
-                "\"Manual\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetXY"
-              },
-              "parameters": [
-                "Point_Green",
-                "=",
-                "CursorX()",
-                "=",
-                "CursorY()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetX"
-              },
-              "parameters": [
-                "WormHead",
-                "+",
-                "10*cos(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetY"
-              },
-              "parameters": [
-                "WormHead",
-                "+",
-                "10*sin(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetAngle"
-              },
-              "parameters": [
-                "WormHead",
-                "=",
-                "AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())-90"
-              ]
-            }
-          ],
-          "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -5403,11 +5328,53 @@
                   },
                   "parameters": [
                     "",
-                    "\"Right\""
+                    "\"Left\""
                   ]
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"Manual\""
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"Manual\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "Point_Green",
+                    "=",
+                    "CursorX()",
+                    "=",
+                    "CursorY()"
+                  ]
+                },
                 {
                   "type": {
                     "value": "SetX"
@@ -5415,7 +5382,7 @@
                   "parameters": [
                     "WormHead",
                     "+",
-                    "20*cos(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
+                    "10*cos(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
                   ]
                 },
                 {
@@ -5425,7 +5392,7 @@
                   "parameters": [
                     "WormHead",
                     "+",
-                    "20*sin(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
+                    "10*sin(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
                   ]
                 },
                 {
@@ -5436,6 +5403,54 @@
                     "WormHead",
                     "=",
                     "AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())-90"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Right\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetX"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "+",
+                        "20*cos(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "+",
+                        "20*sin(ToRad(AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())))"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "=",
+                        "AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())-90"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -5871,7 +5886,7 @@
                 "",
                 "Fireball magic 2 music.mp3",
                 "",
-                "",
+                "20",
                 "100"
               ]
             }
