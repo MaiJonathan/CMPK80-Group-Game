@@ -1,7 +1,11 @@
 {
   "firstLayout": "",
   "gdVersion": {
+<<<<<<< Updated upstream
     "build": 258,
+=======
+    "build": 259,
+>>>>>>> Stashed changes
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -371,7 +375,11 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
+<<<<<<< Updated upstream
         "zoomFactor": 0.4789341884535308,
+=======
+        "zoomFactor": 0.21607397323875788,
+>>>>>>> Stashed changes
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -1726,7 +1734,36 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
+<<<<<<< Updated upstream
           "behaviors": [],
+=======
+          "behaviors": [
+            {
+              "name": "DrawPathfinding",
+              "type": "DrawPathfinding::DrawPathfinding",
+              "LoopIndex": 0,
+              "CorrectionX": 2.0247e-320,
+              "CorrectionY": 2.0247e-320
+            },
+            {
+              "isFolded": true,
+              "name": "Pathfinding",
+              "type": "PathfindingBehavior::PathfindingBehavior",
+              "acceleration": 400,
+              "allowDiagonals": true,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "cellHeight": 20,
+              "cellWidth": 20,
+              "extraBorder": 0,
+              "gridOffsetX": 0,
+              "gridOffsetY": 0,
+              "maxSpeed": 200,
+              "rotateObject": true,
+              "smoothingMaxCellGap": 1
+            }
+          ],
+>>>>>>> Stashed changes
           "animations": [
             {
               "name": "",
@@ -4250,7 +4287,6 @@
           "comment": "Boss Spawning"
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -4563,6 +4599,21 @@
               ],
               "events": [
                 {
+<<<<<<< Updated upstream
+=======
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Settiing the Worm's body to follow the head (Segment Movement)"
+                },
+                {
+>>>>>>> Stashed changes
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4611,12 +4662,33 @@
                     },
                     {
                       "type": {
+<<<<<<< Updated upstream
                         "value": "Rotate"
                       },
                       "parameters": [
                         "WormBody",
                         "2000",
                         ""
+=======
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "PreviousX",
+                        "=",
+                        "WormHead.X()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "PreviousY",
+                        "=",
+                        "WormHead.Y()"
+>>>>>>> Stashed changes
                       ]
                     }
                   ]
@@ -4905,6 +4977,91 @@
           "comment": "Boss Movement"
         },
         {
+<<<<<<< Updated upstream
+=======
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Normal Movement"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "BossState",
+                "!=",
+                "\"Charge\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetX"
+              },
+              "parameters": [
+                "WormHead",
+                "+",
+                "WormHead.Speed* cos(ToRad(WormHead.Angle()))"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "WormHead",
+                "+",
+                "WormHead.Speed* sin(ToRad(WormHead.Angle()))"
+              ]
+            },
+            {
+              "type": {
+                "value": "RotateTowardAngle"
+              },
+              "parameters": [
+                "WormHead",
+                "WormHead.TargetAngle",
+                "WormHead.TurningSpeed",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "TargetAngle",
+                "=",
+                "AngleBetweenPositions(WormHead.X(),WormHead.Y(),Point_Green.X(),Point_Green.Y())"
+              ]
+            },
+            {
+              "type": {
+                "value": "Rotate"
+              },
+              "parameters": [
+                "WormBody",
+                "RandomWithStep(0,1080,40)",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+>>>>>>> Stashed changes
           "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
@@ -5208,6 +5365,491 @@
               ]
             },
             {
+<<<<<<< Updated upstream
+=======
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "In FullScreen"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"FullScreen\""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "Point_Green",
+                        "50",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "100"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosY"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "1100",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "Point_Green",
+                        "50",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "1100"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosY"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "1100",
+                        "=",
+                        "600"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "Point_Green",
+                        "50",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "1100"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosY"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "600"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "100",
+                        "=",
+                        "600"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "Point_Green",
+                        "50",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "100"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PosY"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "600"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetXY"
+                      },
+                      "parameters": [
+                        "Point_Green",
+                        "=",
+                        "100",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Charging Attack"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"ChargeWindUp\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "Point_Green",
+                    "=",
+                    "Player.X()",
+                    "=",
+                    "Player.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "TurningSpeed",
+                    "=",
+                    "180"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "Speed",
+                    "=",
+                    "5"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "\"ChargeTimer\"",
+                        ">=",
+                        "0.6"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "BossState",
+                        "=",
+                        "\"Charge\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "TargetAngle",
+                        "=",
+                        "WormHead.Angle()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "\"ChargeTimer\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "Speed",
+                        "=",
+                        "40"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "TurningSpeed",
+                        "=",
+                        "20"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossState",
+                    "=",
+                    "\"Charge\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "RotateTowardAngle"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "WormHead.TargetAngle",
+                    "WormHead.TurningSpeed",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetX"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "+",
+                    "WormHead.Speed* cos(ToRad(WormHead.Angle()))"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetY"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "+",
+                    "WormHead.Speed* sin(ToRad(WormHead.Angle()))"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "\"ChargeTimer\"",
+                        ">=",
+                        "0.5"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "BossState",
+                        "=",
+                        "\"Follow\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "Speed",
+                        "=",
+                        "10"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "TurningSpeed",
+                        "=",
+                        "360"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Changing Attack Patterns"
+            },
+            {
+>>>>>>> Stashed changes
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5481,12 +6123,113 @@
               "type": {
                 "value": "CollisionNP"
               },
+<<<<<<< Updated upstream
               "parameters": [
                 "Player",
                 "WormHead",
                 "",
                 "",
                 ""
+=======
+              "comment": "Player Dash Damages Boss"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "WormHead",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AdvancedJump::HorizontalDash::IsDashing"
+                  },
+                  "parameters": [
+                    "Player",
+                    "HorizontalDash",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "Health",
+                    "-",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "\"255;255;255\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "WormBody",
+                    "\"255;255;255\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"HitFlash\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Player",
+                    "AngleBetweenPositions(WormHead.X(), WormHead.Y(), Player.X(), Player.Y())",
+                    "500",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossInvincible",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"BossInvincTimer\""
+                  ]
+                }
+>>>>>>> Stashed changes
               ]
             },
             {
@@ -5516,11 +6259,97 @@
               "type": {
                 "value": "SetNumberObjectVariable"
               },
+<<<<<<< Updated upstream
               "parameters": [
                 "WormHead",
                 "Health",
                 "-",
                 "1"
+=======
+              "comment": "WormHead Spits Projectiles"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"SpitTimer\"",
+                    ">=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "WormHead",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"SpitTimer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BossProjectile",
+                    "WormHead.CenterX()",
+                    "WormHead.CenterY()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "BossProjectile",
+                    "=",
+                    "AngleBetweenPositions(WormHead.CenterX(), WormHead.CenterY(), Player.CenterX(), Player.CenterY())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "BossProjectile",
+                    "BossProjectile.Angle()",
+                    "600",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Fireball magic 2 music.mp3",
+                    "",
+                    "20",
+                    "100"
+                  ]
+                }
+>>>>>>> Stashed changes
               ]
             },
             {
@@ -5545,9 +6374,121 @@
               "type": {
                 "value": "ResetTimer"
               },
+<<<<<<< Updated upstream
               "parameters": [
                 "",
                 "\"HitFlash\""
+=======
+              "comment": "Player Damages Boss by Dashing"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AdvancedJump::HorizontalDash::IsDashing"
+                  },
+                  "parameters": [
+                    "Player",
+                    "HorizontalDash",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossInvincible",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "Health",
+                    "-",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "\"255;255;255\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "WormBody",
+                    "\"255;255;255\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"HitFlash\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Player",
+                    "AngleBetweenPositions(WormHead.X(), WormHead.Y(), Player.X(), Player.Y())",
+                    "2000",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossInvincible",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"BossInvincTimer\""
+                  ]
+                }
+>>>>>>> Stashed changes
               ]
             },
             {
@@ -5579,6 +6520,58 @@
               "parameters": [
                 "",
                 "\"BossInvincTimer\""
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "End Boss Invincibilty After 1 second"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"BossInvincTimer\"",
+                    ">=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossInvincible",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "BossInvincible",
+                    "=",
+                    "0"
+                  ]
+                }
               ]
             }
           ]
