@@ -1917,10 +1917,10 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "Jumpthru",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "Jumpthru",
               "yGrabOffset": 0
             }
           ]
@@ -10095,10 +10095,10 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -10164,10 +10164,10 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": false,
               "name": "Platform",
-              "platformType": "Jumpthru",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
+              "platformType": "Jumpthru",
               "yGrabOffset": 0
             }
           ],
@@ -13587,7 +13587,7 @@
                     "WormHead",
                     "TurningSpeed",
                     "=",
-                    "10000"
+                    "0"
                   ]
                 }
               ],
@@ -14281,6 +14281,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -14382,6 +14383,7 @@
               "comment": "Beam attacks, WIP"
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
@@ -14793,166 +14795,50 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Bouncing Projectiles"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "Rotate"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "180",
-                ""
-              ]
             },
             {
-              "type": {
-                "value": "Rotate"
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
               },
-              "parameters": [
-                "ProjectileShard",
-                "180",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "ProjectileBounce",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "Lifetime",
-                "-",
-                "TimeDelta()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"Num4\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "ProjectileBounce",
-                "CursorX()",
-                "CursorY()",
-                ""
-              ]
+              "comment": "Bouncing Projectile Attack"
             },
             {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "Lifetime",
-                "=",
-                "2.5"
-              ]
-            },
-            {
-              "type": {
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "RandomInRange(0,360)",
-                "400",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "Walls",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Bounce::Bounce::BounceOff"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "Bounce",
-                "Walls",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberObjectVariable"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "Lifetime",
-                "<=",
-                "0"
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Repeat",
-              "repeatExpression": "8",
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "ProjectileBounce",
               "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Lifetime",
+                    "-",
+                    "TimeDelta()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Num4\""
+                  ]
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -14960,10 +14846,21 @@
                   },
                   "parameters": [
                     "",
-                    "ProjectileShard",
-                    "ProjectileBounce.X()",
-                    "ProjectileBounce.Y()",
+                    "ProjectileBounce",
+                    "CursorX()",
+                    "CursorY()",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Lifetime",
+                    "=",
+                    "2.5"
                   ]
                 },
                 {
@@ -14971,65 +14868,171 @@
                     "value": "AddForceAL"
                   },
                   "parameters": [
-                    "ProjectileShard",
-                    "LoopIndex*45",
-                    "350",
+                    "ProjectileBounce",
+                    "RandomInRange(0,360)",
+                    "400",
                     "1"
                   ]
                 }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Walls",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
               ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Bounce::Bounce::BounceOff"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Bounce",
+                    "Walls",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Lifetime",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "8",
                   "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "value": "Delete"
+                        "value": "Create"
                       },
                       "parameters": [
-                        "ProjectileBounce",
+                        "",
+                        "ProjectileShard",
+                        "ProjectileBounce.X()",
+                        "ProjectileBounce.Y()",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "AddForceAL"
+                      },
+                      "parameters": [
+                        "ProjectileShard",
+                        "LoopIndex*45",
+                        "350",
+                        "1"
+                      ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "ProjectileBounce",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "LoopIndex",
+                      "type": "number",
+                      "value": 0
+                    }
+                  ],
+                  "loopIndexVariable": "LoopIndex"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "ProjectileShard",
+                    "Walls",
+                    "",
+                    "",
+                    ""
                   ]
                 }
               ],
-              "variables": [
+              "actions": [
                 {
-                  "name": "LoopIndex",
-                  "type": "number",
-                  "value": 0
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "ProjectileShard",
+                    ""
+                  ]
                 }
-              ],
-              "loopIndexVariable": "LoopIndex"
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "ProjectileShard",
-                "Walls",
-                "",
-                "",
-                ""
               ]
-            }
-          ],
-          "actions": [
+            },
             {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "ProjectileShard",
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Rotate"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "180",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Rotate"
+                  },
+                  "parameters": [
+                    "ProjectileShard",
+                    "180",
+                    ""
+                  ]
+                }
               ]
             }
           ]
