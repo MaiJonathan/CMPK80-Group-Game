@@ -7171,181 +7171,6 @@
               "comment": "Boss Death Sequence"
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "WormHead",
-                    "Health",
-                    "<=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "BossDefeated",
-                    "=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetBooleanVariable"
-                  },
-                  "parameters": [
-                    "BossDefeated",
-                    "True",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"DeathTimer\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "WormHead",
-                    "\"255;255;255\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "WormBody",
-                    "\"255;255;255\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanVariable"
-                  },
-                  "parameters": [
-                    "BossDefeated",
-                    "True",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CompareTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"DeathTimer\"",
-                    ">=",
-                    "0.2"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "WormHead",
-                    "\"255;0;0\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "WormBody",
-                    "\"255;0;0\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"DeathTimer\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "DeathTimeElapsed",
-                    "+",
-                    "TimeDelta()"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "DeathTimeElapsed",
-                    ">=",
-                    "2"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "WormHead",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "WormBody",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"BossFight\"",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -7629,6 +7454,64 @@
                 "BossHealthBar",
                 "=",
                 "10",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Boss Death"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "Health",
+                "<=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "WormHead",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "WormBody",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"BossFight\"",
                 ""
               ]
             }
