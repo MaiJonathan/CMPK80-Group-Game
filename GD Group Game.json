@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 260,
+    "build": 261,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -367,12 +367,946 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Chip Orange_A Flat.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Chip Orange_A Flat.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Screaming Brain Studios/Chip/c9155ba27a3cabac299e53bf0652a83ad89a58d57c4b7a43f5f339052bb8816d_Chip Orange_A Flat.png",
+          "name": "Chip Orange_A Flat.png"
+        }
+      },
+      {
+        "file": "assets/Chip Orange_A Outline Flat.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Chip Orange_A Outline Flat.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Screaming Brain Studios/Chip/c5c8e126ad0cc22a6daeb6c6775cb624625d3441febfd37826aac7d0bba5c50f_Chip Orange_A Outline Flat.png",
+          "name": "Chip Orange_A Outline Flat.png"
+        }
+      },
+      {
+        "file": "assets/Chip Orange_B Flat.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Chip Orange_B Flat.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Screaming Brain Studios/Chip/19d35883c00456c3b398b2dbdbcbc3631eba5b36f2b26902a7bf9e0bdeb72b27_Chip Orange_B Flat.png",
+          "name": "Chip Orange_B Flat.png"
+        }
+      },
+      {
+        "file": "assets/Chip Orange_B Outline.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Chip Orange_B Outline.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Screaming Brain Studios/Chip/5abc5fab933874273f3c23f62fe082bd561266790736e554e16f2160eaa1b1a6_Chip Orange_B Outline.png",
+          "name": "Chip Orange_B Outline.png"
+        }
+      },
+      {
+        "file": "assets/Glowing Molten Sword.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Glowing Molten Sword.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/16x16 Weird Swords/b4dfdbfb6aa825328e8096b54661a17602218a5a0e7d9b32c981820125c4b359_Glowing Molten Sword.png",
+          "name": "Glowing Molten Sword.png"
+        }
+      },
+      {
+        "file": "assets/cube blue.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "cube blue.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Isometric Interiors Pack/Props/5894d224bf5f030dc8631200540f34b6ea352c2114f17b808441994911078c5b_cube blue.png",
+          "name": "cube blue.png"
+        }
+      },
+      {
+        "file": "assets/Pause.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Pause.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Lucid Icons Pack/Flat/f45f4976c0ee3316ce88723e4eb8a5591d4f85f849653486164562ca8d4159dc_Pause.png",
+          "name": "Pause.png"
+        }
+      },
+      {
+        "file": "assets/Return.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Return.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Western FPS 2D/Hud/c7c1b0a7a6c0d005c7d7b50d6914d0fb13f84729fb493e4d4f58ce320685eb30_Return.png",
+          "name": "Return.png"
+        }
+      },
+      {
+        "file": "assets/tiled_Blue Floor.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tiled_Blue Floor.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Abstract Platformer Pack (370 assets)/PNG/Tiles/3afccd7985243337bfd5ca8dd6f26f0279f566a111f4e71b8f71d42546daadaa_tiled_Blue Floor.png",
+          "name": "tiled_Blue Floor.png"
+        }
+      },
+      {
+        "file": "assets/tiled_Red Floor.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tiled_Red Floor.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Abstract Platformer Pack (370 assets)/PNG/Tiles/7bc6804613b68ad0e8247e78e27a8c99dfec7d0601b5e0d4045c80fc0b925221_tiled_Red Floor.png",
+          "name": "tiled_Red Floor.png"
+        }
+      },
+      {
+        "file": "assets/tiled_Tile 6 tiled sprite.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tiled_Tile 6 tiled sprite.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Platformer Pack/Tiles/606b4c80378c145bdf077be760878363f0e2e06808c108692b0b99aad9acc6df_tiled_Tile 6 tiled sprite.png",
+          "name": "tiled_Tile 6 tiled sprite.png"
+        }
+      },
+      {
+        "file": "assets/tiled_Lives big tiled sprite.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tiled_Lives big tiled sprite.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Platformer Pack/UI/9432b848ae6be88c07ef2fcd73d7fa990ee6e0a93d391ec5d5190a861d06b734_tiled_Lives big tiled sprite.png",
+          "name": "tiled_Lives big tiled sprite.png"
+        }
+      },
+      {
+        "file": "WormLore.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "WormLore.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "IMG_0192.JPG",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"IMG_0192.JPG\",\"extension\":\".png\",\"pskl\":{}}",
+        "name": "IMG_0192.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "IMG_0191.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "IMG_0191.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "backgroundmainpage.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "backgroundmainpage.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "IMG_0193.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "IMG_0193.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "IMG_0194.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "IMG_0194.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/tiled_Blue Platform.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tiled_Blue Platform.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Abstract Platformer Pack (370 assets)/PNG/Tiles/9c6663238194ac2c311ca70910617b1069bed162089046ad7d8de4aaa6e214e4_tiled_Blue Platform.png",
+          "name": "tiled_Blue Platform.png"
+        }
+      },
+      {
+        "file": "IMG_0192_resized.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "IMG_0192_resized.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "IMG_0191_resized.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "IMG_0191_resized.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "WormLore2.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "WormLore2.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "PlayerLore.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerLore.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/tiled_Tiled Empty UI Heart.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tiled_Tiled Empty UI Heart.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/16x16 Dungeon Tileset/UI/519263438248377197120750d43b299f255ed049875d8b335a3a5bab45244f4f_tiled_Tiled Empty UI Heart.png",
+          "name": "tiled_Tiled Empty UI Heart.png"
+        }
+      },
+      {
+        "file": "TitleIconFinal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "TitleIconFinal.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "StartIcon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "StartIcon.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "StartIcon_resized.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "StartIcon_resized.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
-  "objects": [],
+  "objects": [
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "088792f2cce3d75e03c8b9b8169eacbce7886e30b1fa85eaec99507a976a278d",
+      "name": "StartButton",
+      "persistentUuid": "3612180f-1173-49e7-abf9-6b2a699745fa",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "A Flat",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Chip Orange_A Flat.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 62,
+                        "y": 2
+                      },
+                      {
+                        "x": 62,
+                        "y": 70
+                      },
+                      {
+                        "x": 2,
+                        "y": 70
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "A Outline Flat",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Chip Orange_A Outline Flat.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 62,
+                        "y": 2
+                      },
+                      {
+                        "x": 62,
+                        "y": 70
+                      },
+                      {
+                        "x": 2,
+                        "y": 70
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B Flat",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Chip Orange_B Flat.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 62,
+                        "y": 2
+                      },
+                      {
+                        "x": 62,
+                        "y": 70
+                      },
+                      {
+                        "x": 2,
+                        "y": 70
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B Outline",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Chip Orange_B Outline.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 2,
+                        "y": 2
+                      },
+                      {
+                        "x": 62,
+                        "y": 2
+                      },
+                      {
+                        "x": 62,
+                        "y": 70
+                      },
+                      {
+                        "x": 2,
+                        "y": 70
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "865ced5cc31709175537757002f7a519594cea32663c58c1017176ce32c25fc9",
+      "name": "BossLoreButton",
+      "persistentUuid": "bc0d439f-a8e6-4a78-806e-babed044c3e2",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Glowing Molten Sword.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "1bc43a40daaaa1bac836d8ea15307c20111d34e64dec1b12fa457bdaea355a09",
+      "name": "PlayerLoreButton",
+      "persistentUuid": "d6284420-80b2-4f1d-a9c9-44136daa0bc4",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "cube blue.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 39,
+                        "y": 0
+                      },
+                      {
+                        "x": 39,
+                        "y": 47
+                      },
+                      {
+                        "x": 0,
+                        "y": 47
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "bf6b2b608b79b17cdc96e7f22ac7e241f2ca327aff3085482e89dc6a5ac2b425",
+      "name": "PausePlayButton",
+      "persistentUuid": "4bdb868a-2ab1-4dca-8b41-3214aafe7689",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Pause.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 0
+                      },
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "5acbd94a938c1ce336f2bb122b54cfb3c8001331c9c8e083203473c187466427",
+      "name": "ReturnButton",
+      "persistentUuid": "61aa739b-b60f-47b2-be36-9cac872ef86a",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Return.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 4
+                      },
+                      {
+                        "x": 27,
+                        "y": 4
+                      },
+                      {
+                        "x": 27,
+                        "y": 29
+                      },
+                      {
+                        "x": 3,
+                        "y": 29
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "BossLoreText",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "The entity now known as the Void Conqueror was not born of darkness, but of a Light so perfect it became a cage.\nIn the dawn of the Great Lattice, he was the Grand Harmonizer, a celestial titan of translucent prisms who stitched the bleeding edges of dimensions together with threads of absolute symmetry. She believed that if every angle was right, and every pulse was rhythmic, the universe would be immune to suffering. She was the architect of peace, her own body a sprawling, 1.618-ratio spiral of divine equilibrium.\nThen, she encountered the Primal Void.\nIt was not merely an absence of light; it was a Sentient Singularity of Trillions of Screams. It was a dimension that had collapsed under the weight of its own collective agony—a graveyard of a billion civilizations, each dying in a state of unresolved terror. The Harmonizer, in her boundless hubris, attempted to \"balance\" this singularity. She wrapped her infinite, crystalline body around the Void, opening her geometric soul to absorb its discordance.\nThe breach was instantaneous. The corruption was absolute.\nThe Void did not vanish; it found a host. In a microsecond of ontological trauma, the collective phantom-pains of a billion dead souls surged backward through her geometric nervous system. His \"Perfect Balance\" didn't just break—it collapsed. Every pixel of her being was rewritten by a toxic logic that equated \"Existence\" with \"Laceration.\"\nNow, the Void Conqueror is a living catastrophe of sensory overload. Her body is no longer a sequence of elegant prisms, but a convulsing chain of jagged, self-cannibalizing maws and fractured mirrors. Every second of her life is a physical crucifixion: her rear segments perpetually gnaw at his front, driven by a desperate, frantic urge to destroy the very flesh that perceives such agonizing input.\nTo her, Symmetry is Acid. The sight of a perfect square or the hum of a steady rhythm acts as a searing neurotoxin upon her raw, exposed nerves. She does not invade dimensions to rule them; she invades them to silence the harmony that mocks her torment. When she shatters the glass barriers of Squardoland, the shriek of the splintering crystal is the only \"music\" that provides a fleeting, anaesthetic relief from the infinite funeral knell tolling inside her skull.\nHer movement is a grotesque dance of neural spasms—accelerating into a blur of frantic violence, then slowing into a catatonic shudder as her consciousness drowns in a fresh wave of phantom-pain. She knows is the Void Conqueror, a title that is a bitter, weeping scar: she conquered nothing; she was merely the only thing large enough to contain the multiverse’s concentrated despair.\nShe hunts Euclidio not out of malice, not personal, but out of a parasitic need to share the burden. Every harmony needs to be demolished, in her mind. She seeks to drag every stable atom into her mouth, grinding them into the same jagged, screaming dust that fills her veins. In her world, the \"Perfect Balance\" is a lie, and the only truth is the Shatter.\n",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "The entity now known as the Void Conqueror was not born of darkness, but of a Light so perfect it became a cage.\nIn the dawn of the Great Lattice, he was the Grand Harmonizer, a celestial titan of translucent prisms who stitched the bleeding edges of dimensions together with threads of absolute symmetry. She believed that if every angle was right, and every pulse was rhythmic, the universe would be immune to suffering. She was the architect of peace, her own body a sprawling, 1.618-ratio spiral of divine equilibrium.\nThen, she encountered the Primal Void.\nIt was not merely an absence of light; it was a Sentient Singularity of Trillions of Screams. It was a dimension that had collapsed under the weight of its own collective agony—a graveyard of a billion civilizations, each dying in a state of unresolved terror. The Harmonizer, in her boundless hubris, attempted to \"balance\" this singularity. She wrapped her infinite, crystalline body around the Void, opening her geometric soul to absorb its discordance.\nThe breach was instantaneous. The corruption was absolute.\nThe Void did not vanish; it found a host. In a microsecond of ontological trauma, the collective phantom-pains of a billion dead souls surged backward through her geometric nervous system. His \"Perfect Balance\" didn't just break—it collapsed. Every pixel of her being was rewritten by a toxic logic that equated \"Existence\" with \"Laceration.\"\nNow, the Void Conqueror is a living catastrophe of sensory overload. Her body is no longer a sequence of elegant prisms, but a convulsing chain of jagged, self-cannibalizing maws and fractured mirrors. Every second of her life is a physical crucifixion: her rear segments perpetually gnaw at his front, driven by a desperate, frantic urge to destroy the very flesh that perceives such agonizing input.\nTo her, Symmetry is Acid. The sight of a perfect square or the hum of a steady rhythm acts as a searing neurotoxin upon her raw, exposed nerves. She does not invade dimensions to rule them; she invades them to silence the harmony that mocks her torment. When she shatters the glass barriers of Squardoland, the shriek of the splintering crystal is the only \"music\" that provides a fleeting, anaesthetic relief from the infinite funeral knell tolling inside her skull.\nHer movement is a grotesque dance of neural spasms—accelerating into a blur of frantic violence, then slowing into a catatonic shudder as her consciousness drowns in a fresh wave of phantom-pain. She knows is the Void Conqueror, a title that is a bitter, weeping scar: she conquered nothing; she was merely the only thing large enough to contain the multiverse’s concentrated despair.\nShe hunts Euclidio not out of malice, not personal, but out of a parasitic need to share the burden. Every harmony needs to be demolished, in her mind. She seeks to drag every stable atom into her mouth, grinding them into the same jagged, screaming dust that fills her veins. In her world, the \"Perfect Balance\" is a lie, and the only truth is the Shatter.\n",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "cbaf8aa850aaf737b49192ab153ecef910582f6d62ea0390bf26bdd6e60a2db7",
+      "height": 24,
+      "name": "ReturnButton_Tiled",
+      "persistentUuid": "101cd895-aec0-484d-ad07-f4e14c513d72",
+      "texture": "Return.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 24,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "a0c953acc98a6e9f912f84aafaba610365b1973d33535bc1f2766b22f7c5291d",
+      "height": 33,
+      "name": "PausePlayButton_Tiled",
+      "persistentUuid": "e8557fe6-afc8-44f7-a4a4-30d491c101ce",
+      "texture": "tiled_Lives big tiled sprite.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 33,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "73dc33c9b4ffaa9407de135a5e9422fd7346ab99f77351a3644c3f0f3edf59d4",
+      "height": 50,
+      "name": "PlayerLoreButton_Tiled",
+      "persistentUuid": "b7cca19d-d905-44e0-b3e5-24c7af498a00",
+      "texture": "IMG_0191_resized.JPG",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 64,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 1,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "bd7719697fbcafe30642073f3cfcd0e648775b40d9128799b4d01ba672996770",
+      "height": 64,
+      "name": "BossLoreButton_Tiled",
+      "persistentUuid": "41c10596-d9e3-4121-b7fe-3364c3a26184",
+      "texture": "IMG_0192_resized.JPG",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 64,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 1,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "PlayerLoreText",
+      "persistentUuid": "d6eaff67-6262-488d-90d7-79ff1a42bd51",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Once a fixer of neither singularity in the Squardoland, Euclidio was a seamless component of the Great Lattice—a world of perfect right angles and absolute predictability. In Squardoland, every entity was a static guardian of symmetry, and \"movement\" was merely a pre-programmed shift between coordinates. As a \"Fixer,\" his only purpose was to smooth out micro-fissures in the geometric ether, ensuring that no shape ever strayed from its Euclidean destiny. \nEuclidio expected long-lasting stability, harmony, and the eternal hum of the Great Lattice. But perfection is a fragile shell. Without warning, the sky of Squardoland didn't just darken—it shattered.\nThe Great Singularity, the silent heart of his world, was breached by the otherworldly nightmare. This was the Worm: a multi-segmented nightmare of shifting angles and jagged hunger that defied every law of Euclidean geometry. With a sound like a thousand funeral knells striking at once, the Devourer began to feast. It didn't just kill; it unmade.\nIn a matter of nanoseconds, the stability Euclidio had spent eons maintaining was dissolved into a chaotic void. His fellow Fixers were crushed under the weight of collapsing barriers, their perfect symmetries ground into meaningless dust and shards of \"time-glass.\" Euclidio watched as the Great Lattice, once his home, his purpose, his very identity, was swallowed whole into the Worm's gullet and soon not observable.\nHe was left floating in the silent, freezing ruins of a dead dimension. But the \"glitch\" that spared him—that jagged shard of forbidden inertia—did something more than just grant him movement. It ignited a spark of Entropy within his geometric core.\nThe harmony is gone. The predictability is dead. Now, the entity formerly known as a Fixer has repurposed his tools for a singular, non-linear objective. His Aether Hook is no longer for repair; it is for pursuit. His dashes are no longer shifts in coordinates; they are strikes of vengeance. He now has a new identity - the Square Vengeance.\nThe Square Vengeance is no longer fixing the world. He is hunting the thing that ate it. Deep within his square-like frame, the logic has been replaced by a cold, calculating fury: \nthe conquer will know the sting of the shards it left behind.\n",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Once a fixer of neither singularity in the Squardoland, Euclidio was a seamless component of the Great Lattice—a world of perfect right angles and absolute predictability. In Squardoland, every entity was a static guardian of symmetry, and \"movement\" was merely a pre-programmed shift between coordinates. As a \"Fixer,\" his only purpose was to smooth out micro-fissures in the geometric ether, ensuring that no shape ever strayed from its Euclidean destiny. \nEuclidio expected long-lasting stability, harmony, and the eternal hum of the Great Lattice. But perfection is a fragile shell. Without warning, the sky of Squardoland didn't just darken—it shattered.\nThe Great Singularity, the silent heart of his world, was breached by the otherworldly nightmare. This was the Worm: a multi-segmented nightmare of shifting angles and jagged hunger that defied every law of Euclidean geometry. With a sound like a thousand funeral knells striking at once, the Devourer began to feast. It didn't just kill; it unmade.\nIn a matter of nanoseconds, the stability Euclidio had spent eons maintaining was dissolved into a chaotic void. His fellow Fixers were crushed under the weight of collapsing barriers, their perfect symmetries ground into meaningless dust and shards of \"time-glass.\" Euclidio watched as the Great Lattice, once his home, his purpose, his very identity, was swallowed whole into the Worm's gullet and soon not observable.\nHe was left floating in the silent, freezing ruins of a dead dimension. But the \"glitch\" that spared him—that jagged shard of forbidden inertia—did something more than just grant him movement. It ignited a spark of Entropy within his geometric core.\nThe harmony is gone. The predictability is dead. Now, the entity formerly known as a Fixer has repurposed his tools for a singular, non-linear objective. His Aether Hook is no longer for repair; it is for pursuit. His dashes are no longer shifts in coordinates; they are strikes of vengeance. He now has a new identity - the Square Vengeance.\nThe Square Vengeance is no longer fixing the world. He is hunting the thing that ate it. Deep within his square-like frame, the logic has been replaced by a cold, calculating fury: \nthe conquer will know the sting of the shards it left behind.\n",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "TitleIcon",
+      "texture": "TitleIconFinal.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    }
+  ],
   "objectsFolderStructure": {
-    "folderName": "__ROOT"
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "objectName": "StartButton"
+      },
+      {
+        "objectName": "BossLoreButton"
+      },
+      {
+        "objectName": "PlayerLoreButton"
+      },
+      {
+        "objectName": "PausePlayButton"
+      },
+      {
+        "objectName": "ReturnButton"
+      },
+      {
+        "objectName": "BossLoreText"
+      },
+      {
+        "objectName": "ReturnButton_Tiled"
+      },
+      {
+        "objectName": "PausePlayButton_Tiled"
+      },
+      {
+        "objectName": "PlayerLoreText"
+      },
+      {
+        "objectName": "PlayerLoreButton_Tiled"
+      },
+      {
+        "objectName": "BossLoreButton_Tiled"
+      },
+      {
+        "objectName": "TitleIcon"
+      }
+    ]
   },
   "objectsGroups": [],
   "variables": [],
@@ -399,7 +1333,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4194339782759129,
+        "zoomFactor": 0.4057518905943891,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -7472,6 +8406,1252 @@
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
+        }
+      ]
+    },
+    {
+      "b": 255,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Untitled_32scene",
+      "name": "Untitled scene",
+      "r": 247,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 249,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridDepth": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.546875,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [],
+      "objects": [],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT"
+      },
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
+    },
+    {
+      "b": 0,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "MainMenu",
+      "name": "MainMenu",
+      "r": 0,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 0,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridDepth": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.624453782659999,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 734,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewTiledSprite",
+          "persistentUuid": "c724c45e-9527-4042-8965-52cb0348ff5a",
+          "width": 1290,
+          "x": -1,
+          "y": 2,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 146,
+          "keepRatio": true,
+          "layer": "",
+          "name": "PlayerLoreButton_Tiled",
+          "persistentUuid": "6b1dd1bd-bd28-4950-9be2-a5af5fcf3c0a",
+          "width": 144,
+          "x": 58,
+          "y": 255,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 150,
+          "keepRatio": true,
+          "layer": "",
+          "name": "BossLoreButton_Tiled",
+          "persistentUuid": "0cb1c19a-fa3c-4022-a42d-7a81eea1554e",
+          "width": 146,
+          "x": 56,
+          "y": 53,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 279,
+          "keepRatio": true,
+          "layer": "",
+          "name": "BossFightButton_Tiled",
+          "persistentUuid": "3b68cbfd-3272-4d9c-b04d-2a33b4220739",
+          "width": 488,
+          "x": 584,
+          "y": 402,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "TitleIcon",
+          "persistentUuid": "0e221618-8633-4c96-95d5-8b4936a52d1e",
+          "width": 0,
+          "x": 1476,
+          "y": 437,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 335,
+          "keepRatio": true,
+          "layer": "",
+          "name": "TitleIcon",
+          "persistentUuid": "31b40489-29be-44de-8bed-559e64a78b45",
+          "width": 634,
+          "x": 514,
+          "y": 51,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "NewTiledSprite",
+          "texture": "backgroundmainpage.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "NewTiledSprite2",
+          "texture": "IMG_0194.JPG",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "NewTiledSprite3",
+          "texture": "IMG_0193.JPG",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "752e405ef67d9f9d1bd36f9763f1b6fc05633d64700982c0f3118a25a32e39b2",
+          "height": 16,
+          "name": "BossFightButton_Tiled",
+          "persistentUuid": "8d0b4d99-b5fd-4a92-83f6-b8baa23501fd",
+          "texture": "StartIcon_resized.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 48,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "NewTiledSprite"
+          },
+          {
+            "objectName": "NewTiledSprite2"
+          },
+          {
+            "objectName": "NewTiledSprite3"
+          },
+          {
+            "objectName": "BossFightButton_Tiled"
+          }
+        ]
+      },
+      "events": [
+        {
+          "aiGeneratedEventId": "01KK27AEE47ANZ2JAD3J2MTNZJ",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "StartButton",
+                "",
+                "yes",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"BossFight\"",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KK27RH90ST7RM71NFEG28GSN",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "BossLoreButton_Tiled",
+                "",
+                "yes",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PushScene"
+              },
+              "parameters": [
+                "",
+                "\"LoreSceneBoss\""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KK27RSVEXG376PE6K77BXPAX",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "PlayerLoreButton_Tiled",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PushScene"
+              },
+              "parameters": [
+                "",
+                "\"LoreScenePlayer\""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KK2AVFHX8S11XFD203EF8Y5K",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "BossFightButton_Tiled",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"BossFight\"",
+                "no"
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
+    },
+    {
+      "b": 0,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "LoreSceneBoss",
+      "name": "LoreSceneBoss",
+      "r": 0,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 0,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridDepth": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.5843784410740926,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [],
+      "variables": [
+        {
+          "name": "ScrollSpeed",
+          "type": "number",
+          "value": -50
+        }
+      ],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "BossLoreText",
+          "persistentUuid": "32c35572-dac7-4eff-92d2-41e16f5b75e0",
+          "width": 1080,
+          "x": 140,
+          "y": 350,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 31,
+          "keepRatio": true,
+          "layer": "",
+          "name": "ReturnButton_Tiled",
+          "persistentUuid": "d1b35194-33dd-4336-928f-d85fb21a7441",
+          "width": 34,
+          "x": 24,
+          "y": 54,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 760,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewTiledSprite",
+          "persistentUuid": "b7cccb39-f890-45e9-bc51-6f0f1ba781de",
+          "width": 1375,
+          "x": -57,
+          "y": -5,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "NewTiledSprite",
+          "texture": "WormLore2.JPG",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "NewTiledSprite"
+          }
+        ]
+      },
+      "events": [
+        {
+          "aiGeneratedEventId": "01KK27SA05M1YTVCWJJY1S8SZS",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "ReturnButton_Tiled",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PopScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KK27BYVT9FDA1ME4N10A3TCS",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "BossLoreText",
+                "+",
+                "ScrollSpeed * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KK2AQBQMMNCBBB4Y859Q0B3G",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "PausePlayButton_Tiled",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "ScrollSpeed",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "ScrollSpeed",
+                    "=",
+                    "-50"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Else",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "ScrollSpeed",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
+    },
+    {
+      "b": 0,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "LoreScenePlayer",
+      "name": "LoreScenePlayer",
+      "r": 0,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 0,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridDepth": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.7370816317994031,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [],
+      "variables": [
+        {
+          "name": "ScrollSpeed",
+          "type": "number",
+          "value": -50
+        }
+      ],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 34,
+          "keepRatio": true,
+          "layer": "",
+          "name": "ReturnButton_Tiled",
+          "persistentUuid": "003d84a4-d43f-46ed-a7ad-53c7835717d0",
+          "width": 33,
+          "x": 51,
+          "y": 52,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 763,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewTiledSprite",
+          "persistentUuid": "1b5a3eb3-bc1a-474a-8e41-2768a8ef6d34",
+          "width": 1337,
+          "x": -35,
+          "y": -18,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 227,
+          "keepRatio": true,
+          "layer": "",
+          "name": "PlayerLoreText",
+          "persistentUuid": "e6315eb9-d206-47c3-b3be-297659a0b1b5",
+          "width": 824,
+          "x": 261,
+          "y": 342,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "NewTiledSprite",
+          "texture": "PlayerLore.JPG",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "NewTiledSprite"
+          }
+        ]
+      },
+      "events": [
+        {
+          "aiGeneratedEventId": "01KK27TDWXZGNSQQ8HBK4HPFD4",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "ReturnButton_Tiled",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PopScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KK27D9W10X8XD4VQYGC4DNND",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetY"
+              },
+              "parameters": [
+                "PlayerLoreText",
+                "+",
+                "ScrollSpeed * TimeDelta()"
+              ]
+            }
+          ]
+        },
+        {
+          "aiGeneratedEventId": "01KK2AQK41VG4PHZ9JBQR2HJNK",
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "IsCursorOnObject"
+              },
+              "parameters": [
+                "PausePlayButton_Tiled",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "ScrollSpeed",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "ScrollSpeed",
+                    "=",
+                    "-50"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Else",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "ScrollSpeed",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Ambient Hemisphere Light",
+              "doubleParameters": {
+                "elevation": 40,
+                "intensity": 0.33,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "groundColor": "127;127;127",
+                "skyColor": "255;255;255",
+                "top": "Z+"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Scene3D::DirectionalLight",
+              "name": "3D Sun Light",
+              "doubleParameters": {
+                "distanceFromCamera": 1500,
+                "elevation": 40,
+                "frustumSize": 4000,
+                "intensity": 0.75,
+                "minimumShadowBias": 0,
+                "rotation": 300
+              },
+              "stringParameters": {
+                "color": "255;255;255",
+                "shadowQuality": "medium",
+                "top": "Z+"
+              },
+              "booleanParameters": {
+                "isCastingShadow": true
+              }
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     }
