@@ -401,6 +401,30 @@
         "name": "StraightProjectile3",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "winscreen.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "winscreen.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "winscreen2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "winscreen2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "winscreen3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "winscreen3.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
