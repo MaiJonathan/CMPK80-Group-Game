@@ -369,6 +369,38 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/ed31faa46e5c04883605d72470e0f3bfe1c2e679dc6a4a632ab03e105866ff8b_Framed Pixel Red Fill Bar.png",
           "name": "Framed Pixel Red Fill Bar.png"
         }
+      },
+      {
+        "file": "C:/aseprite/build/bin/StraightProjectile.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "C:\\aseprite\\build\\bin\\StraightProjectile.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "StraightProjectile2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "StraightProjectile2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "StraightProjectile3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "StraightProjectile3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/StraightProjectile3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "StraightProjectile3",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -431,6 +463,11 @@
           "name": "=",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Health",
+          "type": "number",
+          "value": 5
         }
       ],
       "effects": [],
@@ -731,6 +768,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/stage2"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/end-scene"
     }
   ],
   "externalEvents": [],
@@ -766,6 +807,14 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/advancedprojectile"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/shadowclones"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/camerashake"
     }
   ],
   "externalLayouts": []

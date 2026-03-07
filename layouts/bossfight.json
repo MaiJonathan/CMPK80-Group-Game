@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.5653158055126408,
+    "zoomFactor": 0.47893418845353314,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -51,6 +51,11 @@
       "name": "DeathTimeElapsed",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "SummonBoss",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [
@@ -161,8 +166,8 @@
       "name": "Point_Green",
       "persistentUuid": "4b4e13d2-8f57-4b60-a317-c3bbedf70f70",
       "width": 0,
-      "x": 92,
-      "y": 60,
+      "x": 627,
+      "y": -276,
       "zOrder": 17,
       "numberProperties": [],
       "stringProperties": [],
@@ -247,6 +252,22 @@
       "x": 388,
       "y": 48,
       "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "NewText",
+      "persistentUuid": "e36ec2b7-0c39-4481-a0ca-4c36001a38e6",
+      "width": 0,
+      "x": 1335,
+      "y": 3,
+      "zOrder": 21,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1132,6 +1153,50 @@
         "InitialValue": 10,
         "MaxValue": 10
       }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "NewText",
+      "persistentUuid": "70dbcfe4-280d-4bfe-a12c-52e046f17f70",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "\"Shift\" to dash\n\"Space\" to jump\n\"s\" to fall fast\n\"a, d\" left right\n\"e\" to interact with the portal\n\nDebugging Controls (not the same across scenes btw)\n\"p\" resets position\n\"r\" lots of health\n\"z\" zooms out\n\"L\" spawns the boss\n\"I\" spawns laser beams\n\"v\" sets the boss to follow\n\"right click\" sets the boss to follow the mouse\n\"3\" boss circles the screen\n\"2\" boss dashes at the player\n\"o\" orbit the player",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "\"Shift\" to dash\n\"Space\" to jump\n\"s\" to fall fast\n\"a, d\" left right\n\"e\" to interact with the portal\n\nDebugging Controls (not the same across scenes btw)\n\"p\" resets position\n\"r\" lots of health\n\"z\" zooms out\n\"L\" spawns the boss\n\"I\" spawns laser beams\n\"v\" sets the boss to follow\n\"right click\" sets the boss to follow the mouse\n\"3\" boss circles the screen\n\"2\" boss dashes at the player\n\"o\" orbit the player",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -1175,6 +1240,9 @@
       },
       {
         "objectName": "Platform"
+      },
+      {
+        "objectName": "NewText"
       }
     ]
   },
@@ -3611,7 +3679,6 @@
       "comment": "Boss Spawning"
     },
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
@@ -3678,6 +3745,39 @@
           "actions": [
             {
               "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "SummonBoss",
+                "True",
+                "="
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "SummonBoss",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
                 "value": "Create"
               },
               "parameters": [
@@ -3707,6 +3807,16 @@
               "parameters": [
                 "WormHead",
                 "\"IntroTimer\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "SummonBoss",
+                "False",
+                "="
               ]
             }
           ]
@@ -4400,7 +4510,6 @@
       ]
     },
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [],
@@ -4583,6 +4692,17 @@
                 "+",
                 "2"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "TurningSpeed",
+                "=",
+                "90"
+              ]
             }
           ]
         },
@@ -4636,6 +4756,17 @@
                 "=",
                 "10"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "TurningSpeed",
+                "=",
+                "120"
+              ]
             }
           ]
         },
@@ -4676,6 +4807,17 @@
                 "Speed",
                 "=",
                 "20"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "TurningSpeed",
+                "=",
+                "0"
               ]
             }
           ],
@@ -4883,6 +5025,42 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "BossState",
+                "=",
+                "\"FullScreen\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetXY"
+              },
+              "parameters": [
+                "Point_Green",
+                "=",
+                "100",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -4893,6 +5071,39 @@
             "textR": 0
           },
           "comment": "Charging Attack "
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "WormHead",
+                "BossState",
+                "=",
+                "\"ChargeWindUp\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "WormHead",
+                "\"ChargeTimer\""
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -5212,18 +5423,6 @@
                 "=",
                 "\"FullScreen\""
               ]
-            },
-            {
-              "type": {
-                "value": "SetXY"
-              },
-              "parameters": [
-                "Point_Green",
-                "=",
-                "100",
-                "=",
-                "0"
-              ]
             }
           ]
         },
@@ -5250,15 +5449,6 @@
                 "BossState",
                 "=",
                 "\"ChargeWindUp\""
-              ]
-            },
-            {
-              "type": {
-                "value": "ResetObjectTimer"
-              },
-              "parameters": [
-                "WormHead",
-                "\"ChargeTimer\""
               ]
             }
           ]
@@ -6604,8 +6794,386 @@
           },
           "parameters": [
             "",
-            "\"BossFight\"",
+            "\"Stage2\"",
             ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Temporary Enter Scene (just for Beta Showcase) Change Later"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SceneJustBegins"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetBooleanVariable"
+          },
+          "parameters": [
+            "SummonBoss",
+            "True",
+            "="
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"Temporary\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Hide"
+          },
+          "parameters": [
+            "Point_Green"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"Temporary\"",
+            ">=",
+            "5"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "WormHead",
+            "BossState",
+            "=",
+            "\"FullScreen\""
+          ]
+        },
+        {
+          "type": {
+            "value": "Delete"
+          },
+          "parameters": [
+            "portal",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"Temporary\"",
+            ">=",
+            "10"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "WormHead",
+            "BossState",
+            "=",
+            "\"ToOrbit\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"Temporary\"",
+            ">=",
+            "15"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "WormHead",
+            "BossState",
+            "=",
+            "\"Follow\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"Temporary\"",
+            ">=",
+            "20"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "WormHead",
+            "BossState",
+            "=",
+            "\"ChargeWindUp\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"Temporary\"",
+            ">=",
+            "25"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "WormHead",
+            "BossState",
+            "=",
+            "\"Follow\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"Temporary\"",
+            ">=",
+            "30"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "WormHead",
+            "BossState",
+            "=",
+            "\"ChargeWindUp\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"Temporary\"",
+            ">=",
+            "35"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "WormHead",
+            "BossState",
+            "=",
+            "\"ChargeWindUp\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"Temporary\"",
+            ">=",
+            "40"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "WormHead",
+            "BossState",
+            "=",
+            "\"ChargeWindUp\""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"Temporary\"",
+            ">=",
+            "40"
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "WormHead",
+            "BossState",
+            "=",
+            "\"Follow\""
           ]
         }
       ]

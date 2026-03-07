@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.17708595277544026,
+    "zoomFactor": 0.28172599320795877,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -45,12 +45,7 @@
     {
       "name": "AttackTypes",
       "type": "array",
-      "children": [
-        {
-          "type": "string",
-          "value": "beam"
-        }
-      ]
+      "children": []
     }
   ],
   "instances": [
@@ -196,8 +191,8 @@
       "name": "NewText",
       "persistentUuid": "00834154-062a-4057-a663-16735700457b",
       "width": 476,
-      "x": -480,
-      "y": -311,
+      "x": -606,
+      "y": -823,
       "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
@@ -231,6 +226,39 @@
       "x": -756,
       "y": -518,
       "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 64,
+      "height": 29,
+      "keepRatio": true,
+      "layer": "",
+      "name": "CopperRedBar",
+      "persistentUuid": "7d614da2-3465-4e79-9c2a-8550bee2d668",
+      "width": 747,
+      "x": 233,
+      "y": -367,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BlueDotBar",
+      "persistentUuid": "8fcd87d5-cb6f-4c5e-8b7f-962dd47d42cd",
+      "width": 0,
+      "x": -484,
+      "y": -367,
+      "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -431,31 +459,26 @@
       "variables": [
         {
           "name": "AngleToPlayer",
-          "persistentUuid": "df162a37-da51-481b-9575-cb2f931b170f",
           "type": "number",
           "value": 0
         },
         {
           "folded": true,
           "name": "History",
-          "persistentUuid": "01e9f5a7-ea80-494d-b5f1-0dbc9c5358b5",
           "type": "structure",
           "children": [
             {
               "name": "Angle",
-              "persistentUuid": "d4c814be-6e25-46a5-9878-6f13ce396979",
               "type": "structure",
               "children": []
             },
             {
               "name": "X",
-              "persistentUuid": "36ba0999-869e-41f9-9bf3-4e1458aa6c4f",
               "type": "structure",
               "children": []
             },
             {
               "name": "Y",
-              "persistentUuid": "37a56f8a-68ed-44e8-bac5-5ce15302d9f9",
               "type": "structure",
               "children": []
             }
@@ -463,78 +486,65 @@
         },
         {
           "name": "PreviousX",
-          "persistentUuid": "be231729-5d43-49d7-9730-7c3c7d4fff8c",
           "type": "number",
           "value": 0
         },
         {
           "name": "PreviousY",
-          "persistentUuid": "bf97f065-4071-46da-bfc2-23020e5eafda",
           "type": "number",
           "value": 0
         },
         {
           "name": "BodyCounter",
-          "persistentUuid": "0264c02b-94f5-4408-98c7-16ffa76e6a1c",
           "type": "number",
           "value": 0
         },
         {
           "name": "FinishedGenerating",
-          "persistentUuid": "f3e00c17-1ebf-4a05-9138-942d92dad6eb",
           "type": "boolean",
           "value": false
         },
         {
           "name": "BodySpacing",
-          "persistentUuid": "c62c4fad-9973-46b9-9c79-91a2ac47a0ed",
           "type": "number",
           "value": 60
         },
         {
           "name": "Bodies",
-          "persistentUuid": "73239582-3195-449c-bd01-6a9a573a14fb",
           "type": "number",
           "value": 40
         },
         {
           "name": "Speed",
-          "persistentUuid": "d906520c-3ad9-4435-afe3-c62d6b49b81f",
           "type": "number",
           "value": 10
         },
         {
           "name": "BossState",
-          "persistentUuid": "58c31bea-e68f-479c-a016-4eb38d26a2df",
           "type": "string",
           "value": "None"
         },
         {
           "name": "OrbitAngle",
-          "persistentUuid": "2d1a7859-93cf-449a-96e1-b0262380fb39",
           "type": "number",
           "value": 0
         },
         {
           "name": "OrbitRadius",
-          "persistentUuid": "bb053206-4a42-454e-8194-ea68fbdb9687",
           "type": "number",
           "value": 0
         },
         {
           "name": "OrbitPoint",
-          "persistentUuid": "9e0b35e3-f78f-4ed1-a8ef-78e4728edf3a",
           "type": "structure",
           "children": [
             {
               "name": "X",
-              "persistentUuid": "4b6fa807-7b87-469d-bb51-808e304347e4",
               "type": "number",
               "value": 0
             },
             {
               "name": "Y",
-              "persistentUuid": "f9934c5b-8f62-48f6-8fa7-4fd31af42910",
               "type": "number",
               "value": 0
             }
@@ -542,31 +552,26 @@
         },
         {
           "name": "TargetAngle",
-          "persistentUuid": "615668a1-9d3c-40e2-9641-5c34a5955f26",
           "type": "number",
           "value": 0
         },
         {
           "name": "TurningSpeed",
-          "persistentUuid": "7e28afa2-90f0-4e44-8f3e-431f58310e74",
           "type": "number",
           "value": 360
         },
         {
           "name": "DistanceSinceLastPoint",
-          "persistentUuid": "4fb3994e-8f09-4973-853c-7cc306451c3e",
           "type": "number",
           "value": 0
         },
         {
           "name": "Health",
-          "persistentUuid": "c2c20aa8-ef03-440f-ac73-3d7f74439f8c",
           "type": "number",
           "value": 10
         },
         {
           "name": "BossInvincible",
-          "persistentUuid": "2a998e37-8ab3-4247-9d39-5e2742374fa3",
           "type": "number",
           "value": 0
         },
@@ -1079,6 +1084,170 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "ProjectileStraight",
+      "persistentUuid": "42e7782a-24f2-48fa-a7a3-4822aaa545f1",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "StraightProjectile2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 15
+                      },
+                      {
+                        "x": 48,
+                        "y": 15
+                      },
+                      {
+                        "x": 48,
+                        "y": 49
+                      },
+                      {
+                        "x": 16,
+                        "y": 49
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "ProjectileStraightTrail",
+      "persistentUuid": "2a3afac8-b570-4da2-8fa8-c05896efcc08",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "default",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "StraightProjectile3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 15
+                      },
+                      {
+                        "x": 48,
+                        "y": 15
+                      },
+                      {
+                        "x": 48,
+                        "y": 49
+                      },
+                      {
+                        "x": 16,
+                        "y": 49
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "6a16d25e5a4b7e16b72187c4cab1164e2e8fba46d78b9af0132f10301b4224e9",
+      "name": "CopperRedBar",
+      "persistentUuid": "d62429b6-3043-40b3-b5ce-eee39bd27387",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Copper Red Bar",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "MaxValue": 110,
+        "InitialValue": 110,
+        "BarLeftPadding": 9,
+        "BarRightPadding": 9,
+        "BarBottomPadding": 3,
+        "BarTopPadding": 3,
+        "EasingDuration": 0.25,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": false
+      }
+    },
+    {
+      "assetStoreId": "98213fe7f1e2289ef501a2e0a96ed2292535e720bfa616da42cf780d99a3c6d0",
+      "name": "BlueDotBar",
+      "persistentUuid": "efd98edf-5598-43e8-a955-b5ed3df829d7",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "Blue Dot Bar",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "BarTopPadding": 3,
+        "BarLeftPadding": 4,
+        "BarRightPadding": 4,
+        "BarBottomPadding": 4,
+        "EasingDuration": 0,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": false,
+        "InitialValue": 5,
+        "MaxValue": 5
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -1113,6 +1282,18 @@
       },
       {
         "objectName": "WormBeam"
+      },
+      {
+        "objectName": "ProjectileStraight"
+      },
+      {
+        "objectName": "ProjectileStraightTrail"
+      },
+      {
+        "objectName": "CopperRedBar"
+      },
+      {
+        "objectName": "BlueDotBar"
       }
     ]
   },
@@ -1166,24 +1347,6 @@
             "20",
             "20",
             ""
-          ]
-        }
-      ]
-    },
-    {
-      "disabled": true,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-          },
-          "parameters": [
-            "NewText",
-            "Text",
-            "=",
-            "ToString(TimeDelta())"
           ]
         }
       ]
@@ -1255,7 +1418,6 @@
       "comment": "Player Movement"
     },
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
@@ -2200,6 +2362,7 @@
           "comment": "Shadow Trail Dash Effect"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4577,40 +4740,13 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Beam attacks, WIP"
+          "comment": "Beam attacks"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CompareTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"BeamSpawn\"",
-                    ">=",
-                    "RandomInRange(1.5, 3)"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"BeamSpawn\""
-                  ]
-                }
-              ]
-            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -4640,7 +4776,7 @@
                   "parameters": [
                     "",
                     "WormBeam",
-                    "RandomInRange(10,1000)",
+                    "RandomInRange(Player.X()-100,Player.X() + 100)",
                     "354",
                     ""
                   ]
@@ -4652,7 +4788,7 @@
                   "parameters": [
                     "WormBeam",
                     "=",
-                    "RandomInRange(0,90)"
+                    "RandomInRange(0,360)"
                   ]
                 },
                 {
@@ -4694,9 +4830,9 @@
                     "WormBeam",
                     "Tween",
                     "\"BeamRotation\"",
-                    "WormBeam.Angle() + RandomInRange(-10,10)",
+                    "WormBeam.Angle() + RandomInRange(-5,5)",
                     "\"linear\"",
-                    "0.6",
+                    "0.3",
                     "no"
                   ]
                 },
@@ -4921,6 +5057,17 @@
                     },
                     {
                       "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Health",
+                        "-",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "Flash::FlashColor::Flash"
                       },
                       "parameters": [
@@ -5003,125 +5150,49 @@
           "comment": "Bouncing Projectile Attack"
         },
         {
-          "type": "BuiltinCommonInstructions::ForEach",
-          "object": "ProjectileBounce",
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "Lifetime",
-                "-",
-                "TimeDelta()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"Num4\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "ProjectileBounce",
-                "CursorX()",
-                "CursorY()",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "Lifetime",
-                "=",
-                "2.5"
-              ]
-            },
-            {
-              "type": {
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "RandomInRange(0,360)",
-                "400",
-                "1"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "Walls",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Bounce::Bounce::BounceOff"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "Bounce",
-                "Walls",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "folded": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberObjectVariable"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "Lifetime",
-                "<=",
-                "0"
-              ]
-            }
-          ],
           "actions": [],
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Repeat",
-              "repeatExpression": "8",
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "ProjectileBounce",
               "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Lifetime",
+                    "-",
+                    "TimeDelta()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "CurrentAttack",
+                    "=",
+                    "\"bounce\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -5129,10 +5200,21 @@
                   },
                   "parameters": [
                     "",
-                    "ProjectileShard",
-                    "ProjectileBounce.X()",
-                    "ProjectileBounce.Y()",
+                    "ProjectileBounce",
+                    "WormHead.X()",
+                    "WormHead.Y()",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Lifetime",
+                    "=",
+                    "2.5"
                   ]
                 },
                 {
@@ -5140,90 +5222,388 @@
                     "value": "AddForceAL"
                   },
                   "parameters": [
-                    "ProjectileShard",
-                    "LoopIndex*45",
-                    "350",
+                    "ProjectileBounce",
+                    "RandomFloatInRange(AngleBetweenPositions(ProjectileBounce.X(),ProjectileBounce.Y(),Player.X(),Player.Y())-40,AngleBetweenPositions(ProjectileBounce.X(),ProjectileBounce.Y(),Player.X(),Player.Y())+40)",
+                    "400",
                     "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "CurrentAttack",
+                    "=",
+                    "\"None\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Walls",
+                    "",
+                    "",
+                    ""
                   ]
                 }
               ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Bounce::Bounce::BounceOff"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Bounce",
+                    "Walls",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Lifetime",
+                    "<=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "8",
                   "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "value": "Delete"
+                        "value": "Create"
                       },
                       "parameters": [
-                        "ProjectileBounce",
+                        "",
+                        "ProjectileShard",
+                        "ProjectileBounce.X()",
+                        "ProjectileBounce.Y()",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "AddForceAL"
+                      },
+                      "parameters": [
+                        "ProjectileShard",
+                        "LoopIndex*45",
+                        "350",
+                        "1"
+                      ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "ProjectileBounce",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "LoopIndex",
+                      "type": "number",
+                      "value": 0
+                    }
+                  ],
+                  "loopIndexVariable": "LoopIndex"
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "ProjectileShard",
+                    "Walls",
+                    "",
+                    "",
+                    ""
                   ]
                 }
               ],
-              "variables": [
+              "actions": [
                 {
-                  "name": "LoopIndex",
-                  "type": "number",
-                  "value": 0
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "ProjectileShard",
+                    ""
+                  ]
                 }
-              ],
-              "loopIndexVariable": "LoopIndex"
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Rotate"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "180",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Rotate"
+                  },
+                  "parameters": [
+                    "ProjectileShard",
+                    "180",
+                    ""
+                  ]
+                }
+              ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Straight Projectile Attack"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ShadowClones::AnimateShadowClones"
+                  },
+                  "parameters": [
+                    "",
+                    "ProjectileStraight",
+                    "ProjectileStraightTrail",
+                    "10",
+                    "2",
+                    "25",
+                    "10",
+                    "",
+                    "ProjectileStraight.ZOrder()-1",
+                    "yes",
+                    "yes",
+                    "yes",
+                    "yes",
+                    "yes",
+                    "yes",
+                    "yes",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "CurrentAttack",
+                    "=",
+                    "\"straight\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "ProjectileStraight",
+                    "WormHead.X()",
+                    "WormHead.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "ProjectileStraight",
+                    "Scale",
+                    "=",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "ProjectileStraight",
+                    "=",
+                    "AngleBetweenPositions(ProjectileStraight.X(),ProjectileStraight.Y(),Player.X(),Player.Y())"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "ProjectileStraight",
+                    "AngleBetweenPositions(ProjectileStraight.X(),ProjectileStraight.Y(),Player.X(),Player.Y())",
+                    "400",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "WormHead",
+                    "CurrentAttack",
+                    "=",
+                    "\"None\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "ProjectileStraight",
+                    "Walls",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "ProjectileStraight",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "ProjectileStraightTrail",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Camera Shake"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "value": "CollisionNP"
+                "value": "StringObjectVariable"
               },
               "parameters": [
-                "ProjectileShard",
-                "Walls",
-                "",
-                "",
-                ""
+                "WormHead",
+                "CurrentAttack",
+                "=",
+                "\"shake\""
               ]
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "Delete"
+                "value": "CameraShake::ShakeCamera"
               },
               "parameters": [
-                "ProjectileShard",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "Rotate"
-              },
-              "parameters": [
-                "ProjectileBounce",
-                "180",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Rotate"
-              },
-              "parameters": [
-                "ProjectileShard",
-                "180",
+                "",
+                "1",
+                "1",
+                "1",
                 ""
               ]
             }
@@ -5255,11 +5635,30 @@
           ]
         }
       ],
-      "actions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "PushNumber"
+          },
+          "parameters": [
+            "AttackTimes",
+            "11.8"
+          ]
+        },
+        {
+          "type": {
+            "value": "PushString"
+          },
+          "parameters": [
+            "AttackTypes",
+            "\"shake\""
+          ]
+        }
+      ],
       "events": [
         {
           "type": "BuiltinCommonInstructions::Repeat",
-          "repeatExpression": "12",
+          "repeatExpression": "11",
           "conditions": [],
           "actions": [
             {
@@ -5278,6 +5677,165 @@
               "parameters": [
                 "AttackTypes",
                 "\"beam\""
+              ]
+            }
+          ],
+          "variables": [
+            {
+              "name": "LoopIndex",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "loopIndexVariable": "LoopIndex"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "15.155"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"straight\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "15.344"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "15.53"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "15.623"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "15.713"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "15.897"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"straight\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Base Attacks that I haven't manually set"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Repeat",
+          "repeatExpression": "300",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "17 + LoopIndex*(0.555)"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
               ]
             }
           ],
@@ -5344,6 +5902,248 @@
                 "1"
               ]
             }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Hit Reg"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Or"
+          },
+          "parameters": [],
+          "subInstructions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "ProjectileShard",
+                "Player",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "ProjectileBounce",
+                "Player",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "ProjectileStraight",
+                "Player",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "WormHead",
+                "Player",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "WormBody",
+                "Player",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "AdvancedJump::HorizontalDash::IsDashing"
+          },
+          "parameters": [
+            "Player",
+            "HorizontalDash",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "inverted": true,
+            "value": "AdvancedJump::DiveDash::IsDiving"
+          },
+          "parameters": [
+            "Player",
+            "DiveDash",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Player",
+            "Health",
+            "-",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "glass shatter 2.mp3",
+            "",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "Flash::FlashColor::Flash"
+          },
+          "parameters": [
+            "Player",
+            "FlashColor",
+            "0.5",
+            "\"247;121;121\"",
+            ""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "Health",
+                "<=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"PlatformerSection\"",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Health Bars"
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+          },
+          "parameters": [
+            "CopperRedBar",
+            "=",
+            "110-MusicChannelPlayingOffset(1)",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+          },
+          "parameters": [
+            "BlueDotBar",
+            "=",
+            "Player.Health",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SoundChannelPlayingOffset"
+          },
+          "parameters": [
+            "",
+            "1",
+            ">=",
+            "110"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"End Scene\"",
+            ""
           ]
         }
       ]
