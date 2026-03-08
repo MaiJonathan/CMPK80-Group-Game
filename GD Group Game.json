@@ -560,14 +560,14 @@
           "value": 0
         },
         {
-          "name": "=",
+          "name": "Invincible",
           "type": "number",
           "value": 0
         },
         {
           "name": "Health",
           "type": "number",
-          "value": 5
+          "value": 10
         }
       ],
       "effects": [],

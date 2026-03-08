@@ -1162,11 +1162,11 @@
         "BarLeftPadding": 4,
         "BarRightPadding": 4,
         "BarBottomPadding": 4,
-        "EasingDuration": 0,
+        "EasingDuration": 0.5,
         "PreviousHighValueDuration": 0,
         "ShowLabel": false,
-        "InitialValue": 5,
-        "MaxValue": 5
+        "InitialValue": 10,
+        "MaxValue": 10
       }
     },
     {
@@ -5924,7 +5924,7 @@
               "parameters": [
                 "PlayerHealth",
                 "=",
-                "5"
+                "10"
               ]
             },
             {
