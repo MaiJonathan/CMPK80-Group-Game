@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "MainMenu",
   "gdVersion": {
     "build": 261,
     "major": 5,
@@ -16,11 +16,11 @@
     "pixelsRounding": false,
     "projectUuid": "55980a9d-61aa-4052-8175-0e83714f8f25",
     "scaleMode": "linear",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "",
     "templateSlug": "",
     "version": "1.0.0",
     "name": "GD Group Game",
-    "description": "",
+    "description": "Worm Game",
     "author": "",
     "windowWidth": 1280,
     "windowHeight": 720,
@@ -349,7 +349,7 @@
       {
         "file": "StraightProjectile2.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"StraightProjectile2.png\",\"extension\":\".png\"}",
         "name": "StraightProjectile2.png",
         "smoothed": true,
         "userAdded": false
@@ -363,42 +363,46 @@
         "userAdded": false
       },
       {
-<<<<<<< HEAD
         "file": "winscreen.png",
         "kind": "image",
         "metadata": "",
         "name": "winscreen.png",
-=======
-        "file": "backgroundmainpage2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "backgroundmainpage2.png",
->>>>>>> b689a129d74c23d167bf3a041bf7d76a964f9955
         "smoothed": true,
         "userAdded": false
       },
       {
-<<<<<<< HEAD
         "file": "winscreen2.png",
         "kind": "image",
         "metadata": "",
         "name": "winscreen2.png",
-=======
-        "file": "TitleIconFinal2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "TitleIconFinal2.png",
->>>>>>> b689a129d74c23d167bf3a041bf7d76a964f9955
         "smoothed": true,
         "userAdded": false
       },
       {
-<<<<<<< HEAD
         "file": "winscreen3.png",
         "kind": "image",
         "metadata": "",
         "name": "winscreen3.png",
-=======
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "backgroundmainpage2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "backgroundmainpage2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "TitleIconFinal2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "TitleIconFinal2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
         "file": "StartIcon_resized2.png",
         "kind": "image",
         "metadata": "",
@@ -459,8 +463,43 @@
         "kind": "image",
         "metadata": "",
         "name": "Return2.png",
->>>>>>> b689a129d74c23d167bf3a041bf7d76a964f9955
         "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "FallingProjectile.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "FallingProjectile.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/FallingProjectile.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "FallingProjectile",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "boom2.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "boom2.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "boom12.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "boom12.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": false
       }
     ]
@@ -521,14 +560,14 @@
           "value": 0
         },
         {
-          "name": "=",
+          "name": "Invincible",
           "type": "number",
           "value": 0
         },
         {
           "name": "Health",
           "type": "number",
-          "value": 5
+          "value": 10
         }
       ],
       "effects": [],
@@ -892,6 +931,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/flashtransitionpainter"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/homingprojectile"
     }
   ],
   "externalLayouts": []
