@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.37971210019479734,
+    "zoomFactor": 0.5290357402156911,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -46,6 +46,11 @@
       "name": "AttackTypes",
       "type": "array",
       "children": []
+    },
+    {
+      "name": "Count",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -58,8 +63,8 @@
       "name": "Walls",
       "persistentUuid": "f27b3fad-6364-492e-9a0a-6b43b555babf",
       "width": 2989,
-      "x": -800,
-      "y": 1011,
+      "x": -797,
+      "y": 1054,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -158,8 +163,8 @@
       "name": "Walls",
       "persistentUuid": "357ae925-36b8-4883-bd77-128e06ee060a",
       "width": 2000,
-      "x": 851,
-      "y": 26,
+      "x": 1178,
+      "y": 52,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -174,8 +179,8 @@
       "name": "Walls",
       "persistentUuid": "5e4cc314-4a9c-4829-8c5f-e4a0a8e89ccc",
       "width": 2000,
-      "x": -1626,
-      "y": 15,
+      "x": -1782,
+      "y": 43,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -223,8 +228,8 @@
       "name": "Walls",
       "persistentUuid": "4902cb63-70cb-40b9-b7a5-4acb2eabc100",
       "width": 2989,
-      "x": -756,
-      "y": -518,
+      "x": -759,
+      "y": -662,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -259,6 +264,23 @@
       "x": -604,
       "y": 975,
       "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 1878,
+      "keepRatio": true,
+      "layer": "",
+      "name": "FadeOut",
+      "persistentUuid": "51fb738c-3617-4d39-80fd-6e49c18d77c4",
+      "width": 3047,
+      "x": -819,
+      "y": -760,
+      "zOrder": 8,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -663,7 +685,6 @@
       "variables": [
         {
           "name": "SegmentIndex",
-          "persistentUuid": "c0f83f5b-00c2-48e2-b209-4b895ac70b5e",
           "type": "number",
           "value": 1
         }
@@ -889,6 +910,14 @@
           "name": "Bounce",
           "type": "Bounce::Bounce",
           "BounceCount": 0
+        },
+        {
+          "name": "FlashColor",
+          "type": "Flash::FlashColor",
+          "HalfPeriodTime": 0.1,
+          "IsFlashing": false,
+          "FlashDuration": 0,
+          "TintColor": "\"255;255;255\""
         }
       ],
       "animations": [
@@ -1097,11 +1126,12 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "StraightProjectile2",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
@@ -1248,6 +1278,123 @@
         "InitialValue": 5,
         "MaxValue": 5
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "ProjectileFalling",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "WobbleTime",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "WobbleSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "WobbleStrength",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "RotationSpeed",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "FallingProjectile",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "FallingProjectile",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 27,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 9
+                      },
+                      {
+                        "x": 34.5,
+                        "y": 21
+                      },
+                      {
+                        "x": 50,
+                        "y": 32.5
+                      },
+                      {
+                        "x": 14,
+                        "y": 55
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "FadeOut",
+      "persistentUuid": "b994cf23-9a61-43a5-9ec2-10f206fa5ce0",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "FlashTransitionPainter",
+          "type": "FlashTransitionPainter::FlashTransitionPainter",
+          "Progress": 0,
+          "Duration": 0,
+          "Type": "",
+          "Direction": "",
+          "MaxOpacity": 255
+        }
+      ],
+      "fillOpacity": 255,
+      "outlineSize": 1,
+      "outlineOpacity": 255,
+      "absoluteCoordinates": false,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "outlineColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -1287,6 +1434,9 @@
         "objectName": "ProjectileStraight"
       },
       {
+        "objectName": "ProjectileFalling"
+      },
+      {
         "objectName": "ProjectileStraightTrail"
       },
       {
@@ -1294,6 +1444,9 @@
       },
       {
         "objectName": "BlueDotBar"
+      },
+      {
+        "objectName": "FadeOut"
       }
     ]
   },
@@ -1390,7 +1543,7 @@
             "",
             "1",
             "=",
-            "105"
+            "110"
           ]
         },
         {
@@ -1418,6 +1571,7 @@
       "comment": "Player Movement"
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
@@ -3031,6 +3185,7 @@
       "comment": "Boss Spawning"
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
@@ -3651,6 +3806,7 @@
       ]
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [],
@@ -4743,6 +4899,7 @@
           "comment": "Beam attacks"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -4845,6 +5002,111 @@
                     "CurrentAttack",
                     "=",
                     "\"None\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "3",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MusicChannelPlayingOffset"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        ">=",
+                        "50"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "WormBeam",
+                        "RandomInRange(Player.X()-100,Player.X() + 100)",
+                        "354",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "WormBeam",
+                        "=",
+                        "RandomInRange(0,360)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "WormBeam",
+                        "Opacity",
+                        "=",
+                        "80"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "WormBeam",
+                        "Firing",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "WormBeam",
+                        "\"lifetime\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                      },
+                      "parameters": [
+                        "WormBeam",
+                        "Tween",
+                        "\"BeamRotation\"",
+                        "WormBeam.Angle() + RandomInRange(-5,5)",
+                        "\"linear\"",
+                        "0.3",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "CurrentAttack",
+                        "=",
+                        "\"None\""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -5150,10 +5412,23 @@
           "comment": "Bouncing Projectile Attack"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Spawning the Projectiles"
+            },
             {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "ProjectileBounce",
@@ -5185,12 +5460,74 @@
                     "=",
                     "\"bounce\""
                   ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Count",
+                    "=",
+                    "1"
+                  ]
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Once"
+                    "value": "SetStringObjectVariable"
                   },
-                  "parameters": []
+                  "parameters": [
+                    "WormHead",
+                    "CurrentAttack",
+                    "=",
+                    "\"None\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MusicChannelPlayingOffset"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        ">=",
+                        "50"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Count",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Count",
+                    ">=",
+                    "0"
+                  ]
                 }
               ],
               "actions": [
@@ -5230,13 +5567,12 @@
                 },
                 {
                   "type": {
-                    "value": "SetStringObjectVariable"
+                    "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "WormHead",
-                    "CurrentAttack",
-                    "=",
-                    "\"None\""
+                    "Count",
+                    "-",
+                    "1"
                   ]
                 }
               ]
@@ -5272,7 +5608,36 @@
               ]
             },
             {
-              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "Lifetime",
+                    "<=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Flash::FlashColor::Flash"
+                  },
+                  "parameters": [
+                    "ProjectileBounce",
+                    "FlashColor",
+                    "0.5",
+                    "\"253;16;16\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5318,23 +5683,6 @@
                       ]
                     }
                   ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "ProjectileBounce",
-                            ""
-                          ]
-                        }
-                      ]
-                    }
-                  ],
                   "variables": [
                     {
                       "name": "LoopIndex",
@@ -5343,33 +5691,48 @@
                     }
                   ],
                   "loopIndexVariable": "LoopIndex"
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+                },
                 {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "ProjectileShard",
-                    "Walls",
-                    "",
-                    "",
-                    ""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ProjectileBounce",
+                        ""
+                      ]
+                    }
                   ]
-                }
-              ],
-              "actions": [
+                },
                 {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "ProjectileShard",
-                    ""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "ProjectileShard",
+                        "Walls",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "ProjectileShard",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -5383,7 +5746,7 @@
                     "value": "Rotate"
                   },
                   "parameters": [
-                    "ProjectileBounce",
+                    "ProjectileShard",
                     "180",
                     ""
                   ]
@@ -5393,7 +5756,7 @@
                     "value": "Rotate"
                   },
                   "parameters": [
-                    "ProjectileShard",
+                    "ProjectileBounce",
                     "180",
                     ""
                   ]
@@ -5412,9 +5775,10 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Straight Projectile Attack"
+          "comment": "Homing Projectile Attack"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -5454,13 +5818,91 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "StringObjectVariable"
+                    "value": "MusicChannelPlayingOffset"
                   },
                   "parameters": [
-                    "WormHead",
-                    "CurrentAttack",
-                    "=",
-                    "\"straight\""
+                    "",
+                    "1",
+                    ">=",
+                    "50"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HomingProjectile::MoveTowardsTarget"
+                  },
+                  "parameters": [
+                    "",
+                    "ProjectileStraight",
+                    "Player",
+                    "120",
+                    "0",
+                    "30",
+                    "1000",
+                    "0",
+                    "no",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MusicChannelPlayingOffset"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "<",
+                    "50"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HomingProjectile::MoveTowardsTarget"
+                  },
+                  "parameters": [
+                    "",
+                    "ProjectileStraight",
+                    "Player",
+                    "20",
+                    "0",
+                    "30",
+                    "1000",
+                    "0",
+                    "no",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "CurrentAttack",
+                        "=",
+                        "\"homing\""
+                      ]
+                    }
                   ]
                 },
                 {
@@ -5496,27 +5938,6 @@
                 },
                 {
                   "type": {
-                    "value": "SetAngle"
-                  },
-                  "parameters": [
-                    "ProjectileStraight",
-                    "=",
-                    "AngleBetweenPositions(ProjectileStraight.X(),ProjectileStraight.Y(),Player.X(),Player.Y())"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AddForceAL"
-                  },
-                  "parameters": [
-                    "ProjectileStraight",
-                    "AngleBetweenPositions(ProjectileStraight.X(),ProjectileStraight.Y(),Player.X(),Player.Y())",
-                    "400",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetStringObjectVariable"
                   },
                   "parameters": [
@@ -5524,6 +5945,27 @@
                     "CurrentAttack",
                     "=",
                     "\"None\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HomingProjectile::LockOnTarget"
+                  },
+                  "parameters": [
+                    "",
+                    "ProjectileStraight",
+                    "Player",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "ProjectileStraight",
+                    "=",
+                    "AngleBetweenPositions(ProjectileStraight.X(),ProjectileStraight.Y(),Player.X(),Player.Y())"
                   ]
                 }
               ]
@@ -5547,6 +5989,78 @@
               "actions": [
                 {
                   "type": {
+                    "value": "ShadowClones::DeleteShadowClones"
+                  },
+                  "parameters": [
+                    "ProjectileStraight",
+                    "ProjectileStraight",
+                    "ProjectileStraightTrail",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "ProjectileStraight",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "ProjectileStraight",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "AdvancedJump::HorizontalDash::IsDashing"
+                  },
+                  "parameters": [
+                    "Player",
+                    "HorizontalDash",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "AdvancedJump::DiveDash::IsDiving"
+                  },
+                  "parameters": [
+                    "Player",
+                    "DiveDash",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ShadowClones::DeleteShadowClones"
+                  },
+                  "parameters": [
+                    "",
+                    "ProjectileStraight",
+                    "ProjectileStraightTrail",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
@@ -5556,10 +6070,284 @@
                 },
                 {
                   "type": {
+                    "value": "Flash::FlashColor::Flash"
+                  },
+                  "parameters": [
+                    "Player",
+                    "FlashColor",
+                    "0.5",
+                    "\"247;121;121\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "glass shatter 2.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "-",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Debugging Delete"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"k\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
                     "ProjectileStraightTrail",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Falling Triangles"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Repeat",
+              "repeatExpression": "5",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "WormHead",
+                        "CurrentAttack",
+                        "=",
+                        "\"falling\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "ProjectileFalling",
+                    "WormHead.X()+RandomInRange(-60,60)",
+                    "WormHead.Y()+RandomInRange(-30,30)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "Scale",
+                    "=",
+                    "RandomInRange(0.5,0.5)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "=",
+                    "RandomInRange(0,360)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "RandomInRange(0,360)",
+                    "500",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "WobbleTime",
+                    "=",
+                    "RandomInRange(0,6.28)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "WobbleSpeed",
+                    "=",
+                    "RandomInRange(2,4)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "WobbleStrength",
+                    "=",
+                    "RandomInRange(20,60)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "RotationSpeed",
+                    "=",
+                    "360"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "90",
+                    "RandomInRange(300,400)",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "WobbleTime",
+                    "+",
+                    "TimeDelta()*ProjectileFalling.WobbleSpeed"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "0",
+                    "sin(ProjectileFalling.WobbleTime) * ProjectileFalling.WobbleStrength",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Rotate"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "ProjectileFalling.RotationSpeed",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
+                    "Walls",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "ProjectileFalling",
                     ""
                   ]
                 }
@@ -5624,6 +6412,7 @@
       "comment": "Attack Scheduling"
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -5708,7 +6497,7 @@
               },
               "parameters": [
                 "AttackTypes",
-                "\"straight\""
+                "\"homing\""
               ]
             },
             {
@@ -5798,7 +6587,7 @@
               },
               "parameters": [
                 "AttackTypes",
-                "\"straight\""
+                "\"homing\""
               ]
             }
           ]
@@ -5813,11 +6602,10 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Base Attacks that I haven't manually set"
+          "comment": "Generating off a python script (I got tired of manually looking through the waveforms)"
         },
         {
-          "type": "BuiltinCommonInstructions::Repeat",
-          "repeatExpression": "300",
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
@@ -5826,7 +6614,25 @@
               },
               "parameters": [
                 "AttackTimes",
-                "17 + LoopIndex*(0.555)"
+                "15.929"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "16.3"
               ]
             },
             {
@@ -5837,16 +6643,3248 @@
                 "AttackTypes",
                 "\"bounce\""
               ]
-            }
-          ],
-          "variables": [
+            },
             {
-              "name": "LoopIndex",
-              "type": "number",
-              "value": 0
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "16.649"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "17.02"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "17.392"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "17.763"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "18.135"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "18.483"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "18.878"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "19.249"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "19.621"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "19.992"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "20.364"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "20.712"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "21.084"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "21.455"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "23.661"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "24.404"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "24.776"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "25.147"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "25.519"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "25.89"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "26.262"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "26.633"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "27.005"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "27.353"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "27.725"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "28.096"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "28.468"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "28.839"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "29.211"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "29.582"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "29.954"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "30.302"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "30.697"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "31.068"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "31.44"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "31.788"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "32.16"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "32.531"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "32.903"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "33.274"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "35.48"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "35.852"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "36.223"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "36.595"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "36.966"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "37.338"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "37.709"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "38.081"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "38.452"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "38.824"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "39.195"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "39.544"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "39.915"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "40.287"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "40.658"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "41.03"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "41.401"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "41.773"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "42.144"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "42.516"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "42.887"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "43.259"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "43.63"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "43.979"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "44.35"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "44.722"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "45.093"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "45.465"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "45.836"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "46.208"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "46.579"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "46.951"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "54.683"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "55.055"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "55.426"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "55.798"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "56.169"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "56.541"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "56.912"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "57.284"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "57.655"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "58.027"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "58.398"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "58.77"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "59.118"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "59.49"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "59.861"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "70.937"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "71.308"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "71.68"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "72.052"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "72.423"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "72.795"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "73.166"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "73.538"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "73.909"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "74.281"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "74.652"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "75.024"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "75.372"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "75.743"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "76.115"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "76.487"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "76.858"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "77.23"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "77.601"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "77.973"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "78.344"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "78.716"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "79.064"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "79.435"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "79.807"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "80.179"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "80.55"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "80.922"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "81.293"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "81.665"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "82.036"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "82.408"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "82.756"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "84.219"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "84.59"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "84.962"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "85.333"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "85.705"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "86.076"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "86.448"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "86.819"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "87.191"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "87.539"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "87.911"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "88.305"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "88.677"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "89.049"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "89.42"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "89.792"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "90.163"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "90.535"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "90.883"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "91.254"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "91.626"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "91.997"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "92.369"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "92.74"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "93.112"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "93.484"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "93.832"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "94.227"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "94.598"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "94.97"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "95.318"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "95.689"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "96.061"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "96.432"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "96.804"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"bounce\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "99.753"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "100.124"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "100.496"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "100.867"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "101.239"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "101.611"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "101.982"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "102.354"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "102.702"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "103.073"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "103.445"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "103.816"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "104.188"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "104.559"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "104.931"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"homing\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "105.302"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "105.651"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "106.046"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "106.417"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "106.789"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "107.16"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "107.532"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "107.88"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "108.251"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PushNumber"
+              },
+              "parameters": [
+                "AttackTimes",
+                "108.623"
+              ]
+            },
+            {
+              "type": {
+                "value": "PushString"
+              },
+              "parameters": [
+                "AttackTypes",
+                "\"beam\""
+              ]
             }
-          ],
-          "loopIndexVariable": "LoopIndex"
+          ]
         }
       ]
     },
@@ -5956,18 +9994,6 @@
                 "value": "CollisionNP"
               },
               "parameters": [
-                "ProjectileStraight",
-                "Player",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
                 "WormHead",
                 "Player",
                 "",
@@ -6054,34 +10080,32 @@
             ""
           ]
         }
-      ],
-      "events": [
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "NumberObjectVariable"
-              },
-              "parameters": [
-                "Player",
-                "Health",
-                "<=",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"PlatformerSection\"",
-                ""
-              ]
-            }
+          "type": {
+            "value": "NumberObjectVariable"
+          },
+          "parameters": [
+            "Player",
+            "Health",
+            "<=",
+            "0"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"Stage2\"",
+            ""
           ]
         }
       ]
@@ -6138,6 +10162,86 @@
             "1",
             ">=",
             "110"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetStringObjectVariable"
+          },
+          "parameters": [
+            "WormHead",
+            "CurrentAttack",
+            "=",
+            "\"falling\""
+          ]
+        },
+        {
+          "type": {
+            "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
+          },
+          "parameters": [
+            "FadeOut",
+            "FlashTransitionPainter",
+            "\"0;0;0\"",
+            "5",
+            "\"Circular\"",
+            "\"Forward\"",
+            "100",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ResetTimer"
+          },
+          "parameters": [
+            "",
+            "\"TransitionTimer\""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "boom2.wav",
+                "yes",
+                "20",
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "CompareTimer"
+          },
+          "parameters": [
+            "",
+            "\"TransitionTimer\"",
+            ">=",
+            "5"
           ]
         }
       ],
@@ -6250,6 +10354,10 @@
     {
       "name": "FlashColor",
       "type": "Flash::FlashColor"
+    },
+    {
+      "name": "FlashTransitionPainter",
+      "type": "FlashTransitionPainter::FlashTransitionPainter"
     },
     {
       "name": "Flippable",
