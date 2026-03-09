@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.6244537826600083,
+    "zoomFactor": 0.43357743047024705,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -58,13 +58,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 32,
+      "height": 29,
       "layer": "",
       "name": "Walls",
       "persistentUuid": "f27b3fad-6364-492e-9a0a-6b43b555babf",
-      "width": 2989,
-      "x": -797,
-      "y": 1054,
+      "width": 2611,
+      "x": -669,
+      "y": 1058,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -89,14 +89,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 0.5,
+      "depth": 1,
       "height": 8,
       "layer": "",
       "name": "Platform",
       "opacity": 128,
       "persistentUuid": "2c66b364-8e09-47ae-9d02-2390b4f0cf83",
-      "width": 3000,
-      "x": -800,
+      "width": 2551,
+      "x": -641,
       "y": 800,
       "zOrder": 3,
       "numberProperties": [],
@@ -106,14 +106,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 0.5,
+      "depth": 1,
       "height": 8,
       "layer": "",
       "name": "Platform",
       "opacity": 128,
       "persistentUuid": "83e08f27-3bbb-4b87-a0ba-135f401a8d69",
-      "width": 3000,
-      "x": -800,
+      "width": 2538,
+      "x": -636,
       "y": 600,
       "zOrder": 3,
       "numberProperties": [],
@@ -123,14 +123,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 0.5,
+      "depth": 1,
       "height": 8,
       "layer": "",
       "name": "Platform",
       "opacity": 128,
       "persistentUuid": "ec600695-d42a-4a4b-86bd-f97c105895f0",
-      "width": 3000,
-      "x": -800,
+      "width": 2535,
+      "x": -633,
       "y": 400,
       "zOrder": 3,
       "numberProperties": [],
@@ -140,14 +140,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 0.5,
+      "depth": 1,
       "height": 8,
       "layer": "",
       "name": "Platform",
       "opacity": 128,
       "persistentUuid": "870de347-6eea-4479-8653-d2b27735cb5f",
-      "width": 3000,
-      "x": -800,
+      "width": 2546,
+      "x": -630,
       "y": 200,
       "zOrder": 3,
       "numberProperties": [],
@@ -162,10 +162,10 @@
       "layer": "",
       "name": "Walls",
       "persistentUuid": "357ae925-36b8-4883-bd77-128e06ee060a",
-      "width": 2000,
-      "x": 1178,
-      "y": 52,
-      "zOrder": 1,
+      "width": 1592,
+      "x": 1130,
+      "y": 274,
+      "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -178,10 +178,10 @@
       "layer": "",
       "name": "Walls",
       "persistentUuid": "5e4cc314-4a9c-4829-8c5f-e4a0a8e89ccc",
-      "width": 2000,
-      "x": -1782,
-      "y": 43,
-      "zOrder": 1,
+      "width": 1593,
+      "x": -1449,
+      "y": 275,
+      "zOrder": 9,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -212,7 +212,7 @@
       "name": "Point_Green",
       "persistentUuid": "83e26881-90e0-487a-9b43-b915e9a1eaa1",
       "width": 0,
-      "x": 1820,
+      "x": 1830,
       "y": -400,
       "zOrder": 5,
       "numberProperties": [],
@@ -227,9 +227,9 @@
       "layer": "",
       "name": "Walls",
       "persistentUuid": "4902cb63-70cb-40b9-b7a5-4acb2eabc100",
-      "width": 2989,
-      "x": -759,
-      "y": -662,
+      "width": 2609,
+      "x": -667,
+      "y": -506,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -261,8 +261,8 @@
       "name": "BlueDotBar",
       "persistentUuid": "8fcd87d5-cb6f-4c5e-8b7f-962dd47d42cd",
       "width": 0,
-      "x": -641,
-      "y": 1017,
+      "x": -632,
+      "y": 1053,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -281,6 +281,72 @@
       "x": -819,
       "y": -760,
       "zOrder": 8,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 1657,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Bounds",
+      "persistentUuid": "4bce83dd-c57d-4a5a-912a-e0a0362932b6",
+      "width": 100,
+      "x": 1942,
+      "y": -530,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 1657,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Bounds",
+      "persistentUuid": "d3146ea6-c3c3-41ff-a060-07f733dc455b",
+      "width": 100,
+      "x": -764,
+      "y": -554,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": true,
+      "depth": 1,
+      "height": 2806,
+      "layer": "",
+      "name": "Bounds",
+      "persistentUuid": "3ab95bb8-55b4-4515-a473-5d24c4b12924",
+      "width": 100,
+      "x": 585,
+      "y": -1959,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": true,
+      "depth": 1,
+      "height": 2802,
+      "layer": "",
+      "name": "Bounds",
+      "persistentUuid": "8d8a1178-1a40-4cbb-9dac-bbc2093cde39",
+      "width": 100,
+      "x": 586,
+      "y": -253,
+      "zOrder": 11,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1395,6 +1461,67 @@
         "g": 0,
         "b": 0
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Bounds",
+      "persistentUuid": "baf7c794-2c42-4e4f-bfc7-8ed950fb1bb7",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "default",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "PixelTrail.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 100,
+                        "y": 0
+                      },
+                      {
+                        "x": 100,
+                        "y": 100
+                      },
+                      {
+                        "x": 0,
+                        "y": 100
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -1402,6 +1529,9 @@
     "children": [
       {
         "objectName": "Walls"
+      },
+      {
+        "objectName": "Bounds"
       },
       {
         "objectName": "Platform"
@@ -4200,7 +4330,7 @@
                   "parameters": [
                     "Point_Green",
                     "=",
-                    "1820",
+                    "1830",
                     "=",
                     "-400"
                   ]
@@ -4228,7 +4358,7 @@
                   "parameters": [
                     "Point_Green",
                     "=",
-                    "1820"
+                    "1830"
                   ]
                 },
                 {
@@ -4250,7 +4380,7 @@
                   "parameters": [
                     "Point_Green",
                     "=",
-                    "1820",
+                    "1830",
                     "=",
                     "980"
                   ]
@@ -4278,7 +4408,7 @@
                   "parameters": [
                     "Point_Green",
                     "=",
-                    "1820"
+                    "1830"
                   ]
                 },
                 {
@@ -4939,7 +5069,6 @@
       "comment": "Boss Attacks"
     },
     {
-      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [],
@@ -5633,7 +5762,7 @@
                   },
                   "parameters": [
                     "ProjectileBounce",
-                    "Walls",
+                    "Bounds",
                     "",
                     "",
                     ""
@@ -5765,7 +5894,7 @@
                   },
                   "parameters": [
                     "ProjectileShard",
-                    "Walls",
+                    "Bounds",
                     "",
                     "",
                     ""
@@ -5825,7 +5954,6 @@
           "comment": "Homing Projectile Attack"
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -5884,7 +6012,7 @@
                     "",
                     "ProjectileHoming",
                     "Player",
-                    "120",
+                    "90",
                     "0",
                     "30",
                     "1000",
@@ -6026,7 +6154,7 @@
                   },
                   "parameters": [
                     "ProjectileHoming",
-                    "Walls",
+                    "Bounds",
                     "",
                     "",
                     ""
@@ -6194,6 +6322,33 @@
                   "parameters": [
                     "",
                     "\"InvincTimer\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "ProjectileHoming",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "ProjectileHomingTrail",
+                    ""
                   ]
                 }
               ]
@@ -6428,7 +6583,7 @@
                   },
                   "parameters": [
                     "ProjectileFalling",
-                    "Walls",
+                    "Bounds",
                     "",
                     "",
                     ""
