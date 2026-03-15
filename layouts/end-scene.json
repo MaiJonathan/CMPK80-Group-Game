@@ -1,0 +1,478 @@
+{
+  "b": 42,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "End_32Scene",
+  "name": "End Scene",
+  "r": 34,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 15,
+  "uiSettings": {
+    "grid": false,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridDepth": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridOffsetZ": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": false,
+    "zoomFactor": 1.0973679695629526,
+    "windowMask": false,
+    "selectedLayer": "",
+    "gameEditorMode": "instances-editor"
+  },
+  "objectsGroups": [],
+  "variables": [],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 303,
+      "keepRatio": true,
+      "layer": "",
+      "name": "WinTitle",
+      "persistentUuid": "835b497f-9906-4b82-94a9-b1bbc011e547",
+      "width": 979,
+      "x": 180,
+      "y": 303,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "RestartPrompt",
+      "persistentUuid": "7b102382-a6d0-4cc8-9905-d59b33c0d8bf",
+      "width": 0,
+      "x": 497,
+      "y": 568,
+      "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 725,
+      "keepRatio": true,
+      "layer": "",
+      "name": "NewSprite",
+      "persistentUuid": "d7040a26-4a60-4c72-8d0c-5b2e1c1d8c4e",
+      "width": 1282,
+      "x": -2,
+      "y": -7,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 52,
+      "keepRatio": true,
+      "layer": "",
+      "name": "RestartPrompt",
+      "persistentUuid": "d690b84b-8f57-4649-9215-c159e034e6de",
+      "width": 363,
+      "x": 519,
+      "y": 358,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 26,
+      "height": 35,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Unnamed",
+      "persistentUuid": "fca16eae-d40e-4761-a215-974abf85cd27",
+      "width": 347,
+      "x": 457,
+      "y": 356,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "WinTitle",
+      "persistentUuid": "c21578d7-9d0d-4c2e-be0b-a5e1ef8201d8",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "YOU WIN. HURRAY.",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 100,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "YOU WIN. HURRAY.",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 100,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "NewTiledSprite",
+      "texture": "",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "RestartPrompt",
+      "persistentUuid": "b6868ad1-a5ea-441a-9d88-d63ac3b68efd",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Press to Play Again\n",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 25,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Press to Play Again\n",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 25,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "NewSprite",
+      "persistentUuid": "4dc126fe-9fe4-4edf-aac3-fa4d32043436",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "winscreen3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 1736,
+                        "y": 0
+                      },
+                      {
+                        "x": 1736,
+                        "y": 938
+                      },
+                      {
+                        "x": 0,
+                        "y": 938
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "d00645a899e762e085fa6fdf2625701baea9cc10ee903a64ca7d371e5bbb8dca",
+      "name": "Unnamed",
+      "persistentUuid": "948293c9-4e89-4682-9fa7-6b00d587798a",
+      "type": "PanelSpriteButton::PanelSpriteButton",
+      "variant": "Floating Out Button Dark Blue",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "LeftPadding": 0,
+        "RightPadding": 0,
+        "PressedLabelOffsetY": 2,
+        "BottomPadding": 4,
+        "TopPadding": 0,
+        "HoveredFadeOutDuration": 0,
+        "LabelText": "\n"
+      }
+    }
+  ],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "objectName": "WinTitle"
+      },
+      {
+        "objectName": "NewTiledSprite"
+      },
+      {
+        "objectName": "RestartPrompt"
+      },
+      {
+        "objectName": "Unnamed"
+      },
+      {
+        "objectName": "NewSprite"
+      }
+    ]
+  },
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+          },
+          "parameters": [
+            "Unnamed",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"BossFight\"",
+            ""
+          ]
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Ambient Hemisphere Light",
+          "doubleParameters": {
+            "elevation": 40,
+            "intensity": 0.33,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "groundColor": "127;127;127",
+            "skyColor": "255;255;255",
+            "top": "Z+"
+          },
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Scene3D::DirectionalLight",
+          "name": "3D Sun Light",
+          "doubleParameters": {
+            "distanceFromCamera": 1500,
+            "elevation": 40,
+            "frustumSize": 4000,
+            "intensity": 0.75,
+            "minimumShadowBias": 0,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "color": "255;255;255",
+            "shadowQuality": "medium",
+            "top": "Z+"
+          },
+          "booleanParameters": {
+            "isCastingShadow": true
+          }
+        }
+      ]
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "AdvancedJump",
+      "type": "AdvancedJump::AdvancedJump"
+    },
+    {
+      "name": "Animation",
+      "type": "AnimatableCapability::AnimatableBehavior"
+    },
+    {
+      "name": "Bounce",
+      "type": "Bounce::Bounce"
+    },
+    {
+      "name": "DiveDash",
+      "type": "AdvancedJump::DiveDash"
+    },
+    {
+      "name": "Effect",
+      "type": "EffectCapability::EffectBehavior"
+    },
+    {
+      "name": "FlashColor",
+      "type": "Flash::FlashColor"
+    },
+    {
+      "name": "Flippable",
+      "type": "FlippableCapability::FlippableBehavior"
+    },
+    {
+      "name": "HorizontalDash",
+      "type": "AdvancedJump::HorizontalDash"
+    },
+    {
+      "name": "Opacity",
+      "type": "OpacityCapability::OpacityBehavior"
+    },
+    {
+      "name": "PlatformerConfigurationStack",
+      "type": "AdvancedJump::PlatformerConfigurationStack"
+    },
+    {
+      "name": "PlatformerObject",
+      "type": "PlatformBehavior::PlatformerObjectBehavior"
+    },
+    {
+      "name": "RemapForPlatformer",
+      "type": "BehaviorRemapper::RemapForPlatformer"
+    },
+    {
+      "name": "Resizable",
+      "type": "ResizableCapability::ResizableBehavior"
+    },
+    {
+      "name": "Scale",
+      "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Text",
+      "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
+    }
+  ]
+}
