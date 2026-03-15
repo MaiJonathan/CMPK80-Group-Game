@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "MainMenu",
   "gdVersion": {
     "build": 261,
     "major": 5,
@@ -436,6 +436,94 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Menu buttons/44aceaa249d2ecb8bfe3eb7bedcb17aac44c0f5f13f9f58d85427a5afa7e92f0_CarterOne-Regular.ttf",
           "name": "CarterOne-Regular.ttf"
         }
+      },
+      {
+        "file": "assets/CoverPage.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\CoverPage.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/IMG_0194.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\IMG_0194.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/IMG_0193.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\IMG_0193.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/StartIcon-removebg-preview.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\StartIcon-removebg-preview.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/GuidanceIcon2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\GuidanceIcon2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/IMG_0191_resized.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\IMG_0191_resized.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/IMG_0192_resized.JPG",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\IMG_0192_resized.JPG",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/CoverPage2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\CoverPage2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Return.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Return.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/WormLoreSec.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\WormLoreSec.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/PlayerLoreSec.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\PlayerLoreSec.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ]
   },
@@ -794,11 +882,27 @@
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/bossfight"
+      "referenceTo": "/layouts/mainmenu"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/guidingpage"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/loresceneplayer"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/loresceneboss"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/platformersection"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/bossfight"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

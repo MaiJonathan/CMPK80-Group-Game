@@ -1,0 +1,637 @@
+{
+  "b": 0,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "MainMenu",
+  "name": "MainMenu",
+  "r": 0,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 0,
+  "uiSettings": {
+    "grid": false,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridDepth": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridOffsetZ": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": false,
+    "zoomFactor": 0.8700232859857308,
+    "windowMask": false,
+    "selectedLayer": "",
+    "gameEditorMode": "instances-editor"
+  },
+  "objectsGroups": [],
+  "variables": [],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 950,
+      "keepRatio": true,
+      "layer": "",
+      "name": "NewTiledSprite",
+      "persistentUuid": "c724c45e-9527-4042-8965-52cb0348ff5a",
+      "width": 1535,
+      "x": -131,
+      "y": -103,
+      "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 146,
+      "keepRatio": true,
+      "layer": "",
+      "name": "PlayerLoreButton_Tiled",
+      "persistentUuid": "6b1dd1bd-bd28-4950-9be2-a5af5fcf3c0a",
+      "width": 144,
+      "x": 24,
+      "y": 334,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 150,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BossLoreButton_Tiled",
+      "persistentUuid": "0cb1c19a-fa3c-4022-a42d-7a81eea1554e",
+      "width": 146,
+      "x": 21,
+      "y": 164,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 194,
+      "keepRatio": true,
+      "layer": "",
+      "name": "BossFightButton_Tiled",
+      "persistentUuid": "3b68cbfd-3272-4d9c-b04d-2a33b4220739",
+      "width": 403,
+      "x": 451,
+      "y": 163,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TitleIcon",
+      "persistentUuid": "0e221618-8633-4c96-95d5-8b4936a52d1e",
+      "width": 0,
+      "x": 1476,
+      "y": 437,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 67,
+      "keepRatio": true,
+      "layer": "",
+      "name": "NewText",
+      "persistentUuid": "18d40691-9423-46fd-96cf-569b3a9c2714",
+      "width": 132,
+      "x": 25,
+      "y": 97,
+      "zOrder": 8,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 189,
+      "keepRatio": true,
+      "layer": "",
+      "name": "GuidingButton_Tiled",
+      "persistentUuid": "34281ea2-fbdf-4e42-bac3-acba44de75ee",
+      "width": 258,
+      "x": 1011,
+      "y": 12,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "NewTiledSprite",
+      "persistentUuid": "5fc3b613-2311-4b06-b91f-07db2f4cec6b",
+      "texture": "assets\\CoverPage.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "NewTiledSprite2",
+      "texture": "assets\\IMG_0194.JPG",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "NewTiledSprite3",
+      "texture": "assets\\IMG_0193.JPG",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "752e405ef67d9f9d1bd36f9763f1b6fc05633d64700982c0f3118a25a32e39b2",
+      "height": 16,
+      "name": "BossFightButton_Tiled",
+      "persistentUuid": "8d0b4d99-b5fd-4a92-83f6-b8baa23501fd",
+      "texture": "assets\\StartIcon-removebg-preview.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 48,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "NewText",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Godray",
+          "name": "Effect",
+          "doubleParameters": {
+            "angle": 30,
+            "animationSpeed": 1,
+            "gain": 0.6,
+            "lacunarity": 2.75,
+            "light": 30,
+            "padding": 0,
+            "x": 100,
+            "y": 100
+          },
+          "stringParameters": {},
+          "booleanParameters": {
+            "parallel": true
+          }
+        }
+      ],
+      "behaviors": [],
+      "string": "Lore：",
+      "font": "668523d3d2bb73faa358e1ebafa55f43d2760f8abbe99aa15476121c1bcc7eb6_Charm-Regular.ttf",
+      "textAlignment": "left",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Lore：",
+        "font": "668523d3d2bb73faa358e1ebafa55f43d2760f8abbe99aa15476121c1bcc7eb6_Charm-Regular.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 40,
+        "lineHeight": 0,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "fad7e726d8b9b54bd0c0b7b68febc88c0d53e776acec05be9053a8dad74913c4",
+      "height": 24,
+      "name": "GuidingButton_Tiled",
+      "persistentUuid": "6bcea008-c9ea-4b43-b9c5-e2f737d3a34e",
+      "texture": "assets\\GuidanceIcon2.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 24,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "bd7719697fbcafe30642073f3cfcd0e648775b40d9128799b4d01ba672996770",
+      "height": 64,
+      "name": "BossLoreButton_Tiled",
+      "persistentUuid": "5e0d264d-8333-490f-854a-0663ca3432f5",
+      "texture": "assets\\IMG_0192_resized.JPG",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 64,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 1,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "73dc33c9b4ffaa9407de135a5e9422fd7346ab99f77351a3644c3f0f3edf59d4",
+      "height": 50,
+      "name": "PlayerLoreButton_Tiled",
+      "persistentUuid": "fe422b33-9081-44e5-b54c-3e634204f964",
+      "texture": "assets\\IMG_0191_resized.JPG",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 64,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "Glow",
+          "name": "Effect",
+          "doubleParameters": {
+            "distance": 15,
+            "innerStrength": 1,
+            "outerStrength": 2
+          },
+          "stringParameters": {
+            "color": "255;255;255"
+          },
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": []
+    }
+  ],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "objectName": "NewTiledSprite"
+      },
+      {
+        "objectName": "NewTiledSprite2"
+      },
+      {
+        "objectName": "NewTiledSprite3"
+      },
+      {
+        "objectName": "BossFightButton_Tiled"
+      },
+      {
+        "objectName": "BossLoreButton_Tiled"
+      },
+      {
+        "objectName": "PlayerLoreButton_Tiled"
+      },
+      {
+        "objectName": "NewText"
+      },
+      {
+        "objectName": "GuidingButton_Tiled"
+      }
+    ]
+  },
+  "events": [
+    {
+      "aiGeneratedEventId": "01KK27RH90ST7RM71NFEG28GSN",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MouseButtonFromTextReleased"
+          },
+          "parameters": [
+            "",
+            "\"Left\""
+          ]
+        },
+        {
+          "type": {
+            "value": "IsCursorOnObject"
+          },
+          "parameters": [
+            "BossLoreButton_Tiled",
+            "",
+            "yes",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PushScene"
+          },
+          "parameters": [
+            "",
+            "\"LoreSceneBoss\""
+          ]
+        }
+      ]
+    },
+    {
+      "aiGeneratedEventId": "01KK27RSVEXG376PE6K77BXPAX",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MouseButtonFromTextReleased"
+          },
+          "parameters": [
+            "",
+            "\"Left\""
+          ]
+        },
+        {
+          "type": {
+            "value": "IsCursorOnObject"
+          },
+          "parameters": [
+            "PlayerLoreButton_Tiled",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PushScene"
+          },
+          "parameters": [
+            "",
+            "\"LoreScenePlayer\""
+          ]
+        }
+      ]
+    },
+    {
+      "aiGeneratedEventId": "01KK2AVFHX8S11XFD203EF8Y5K",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MouseButtonFromTextReleased"
+          },
+          "parameters": [
+            "",
+            "\"Left\""
+          ]
+        },
+        {
+          "type": {
+            "value": "IsCursorOnObject"
+          },
+          "parameters": [
+            "BossFightButton_Tiled",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"BossFight\"",
+            "no"
+          ]
+        }
+      ]
+    },
+    {
+      "aiGeneratedEventId": "01KKSAP699P3XKY0A5D0G3SXW5",
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MouseButtonFromTextReleased"
+          },
+          "parameters": [
+            "",
+            "\"Left\""
+          ]
+        },
+        {
+          "type": {
+            "value": "IsCursorOnObject"
+          },
+          "parameters": [
+            "GuidingButton_Tiled",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PushScene"
+          },
+          "parameters": [
+            "",
+            "\"GuidingPage\""
+          ]
+        }
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Ambient Hemisphere Light",
+          "doubleParameters": {
+            "elevation": 40,
+            "intensity": 0.33,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "groundColor": "127;127;127",
+            "skyColor": "255;255;255",
+            "top": "Z+"
+          },
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Scene3D::DirectionalLight",
+          "name": "3D Sun Light",
+          "doubleParameters": {
+            "distanceFromCamera": 1500,
+            "elevation": 40,
+            "frustumSize": 4000,
+            "intensity": 0.75,
+            "minimumShadowBias": 0,
+            "rotation": 300
+          },
+          "stringParameters": {
+            "color": "255;255;255",
+            "shadowQuality": "medium",
+            "top": "Z+"
+          },
+          "booleanParameters": {
+            "isCastingShadow": true
+          }
+        }
+      ]
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "AdvancedJump",
+      "type": "AdvancedJump::AdvancedJump"
+    },
+    {
+      "name": "Animation",
+      "type": "AnimatableCapability::AnimatableBehavior"
+    },
+    {
+      "name": "Bounce",
+      "type": "Bounce::Bounce"
+    },
+    {
+      "name": "DiveDash",
+      "type": "AdvancedJump::DiveDash"
+    },
+    {
+      "name": "Effect",
+      "type": "EffectCapability::EffectBehavior"
+    },
+    {
+      "name": "FlashColor",
+      "type": "Flash::FlashColor"
+    },
+    {
+      "name": "Flippable",
+      "type": "FlippableCapability::FlippableBehavior"
+    },
+    {
+      "name": "HorizontalDash",
+      "type": "AdvancedJump::HorizontalDash"
+    },
+    {
+      "name": "Opacity",
+      "type": "OpacityCapability::OpacityBehavior"
+    },
+    {
+      "name": "PlatformerConfigurationStack",
+      "type": "AdvancedJump::PlatformerConfigurationStack"
+    },
+    {
+      "name": "PlatformerObject",
+      "type": "PlatformBehavior::PlatformerObjectBehavior"
+    },
+    {
+      "name": "RemapForPlatformer",
+      "type": "BehaviorRemapper::RemapForPlatformer"
+    },
+    {
+      "name": "Resizable",
+      "type": "ResizableCapability::ResizableBehavior"
+    },
+    {
+      "name": "Scale",
+      "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Text",
+      "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
+    }
+  ]
+}
