@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.6672773998329988,
+    "zoomFactor": 0.3553434558816992,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -28,23 +28,6 @@
   "objectsGroups": [],
   "variables": [],
   "instances": [
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 303,
-      "keepRatio": true,
-      "layer": "",
-      "name": "WinTitle",
-      "persistentUuid": "835b497f-9906-4b82-94a9-b1bbc011e547",
-      "width": 979,
-      "x": 180,
-      "y": 303,
-      "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
     {
       "angle": 0,
       "customSize": false,
@@ -111,53 +94,26 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 579,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Credit_Text",
+      "persistentUuid": "5f23bcd7-9981-41a0-80c9-872bb1ea2108",
+      "width": 351,
+      "x": 908,
+      "y": 685,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
-    {
-      "assetStoreId": "",
-      "bold": false,
-      "italic": false,
-      "name": "WinTitle",
-      "persistentUuid": "c21578d7-9d0d-4c2e-be0b-a5e1ef8201d8",
-      "smoothed": true,
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "string": "YOU WIN. HURRAY.",
-      "font": "",
-      "textAlignment": "left",
-      "characterSize": 100,
-      "color": {
-        "b": 255,
-        "g": 255,
-        "r": 255
-      },
-      "content": {
-        "bold": false,
-        "isOutlineEnabled": false,
-        "isShadowEnabled": false,
-        "italic": false,
-        "outlineColor": "255;255;255",
-        "outlineThickness": 2,
-        "shadowAngle": 90,
-        "shadowBlurRadius": 2,
-        "shadowColor": "0;0;0",
-        "shadowDistance": 4,
-        "shadowOpacity": 127,
-        "smoothed": true,
-        "underlined": false,
-        "text": "YOU WIN. HURRAY.",
-        "font": "",
-        "textAlignment": "left",
-        "verticalTextAlignment": "top",
-        "characterSize": 100,
-        "lineHeight": 0,
-        "color": "255;255;255"
-      }
-    },
     {
       "assetStoreId": "",
       "height": 32,
@@ -292,14 +248,60 @@
         "HoveredFadeOutDuration": 0,
         "LabelText": "\n"
       }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "Credit_Text",
+      "persistentUuid": "244a2a6f-307a-4167-ae7c-3d989d5d8b0c",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "string": "Credits\n\nGame Made By: \nJonathan, Aayan, Jason\n\nAssets:\n- The worm: Jonathan\n- The player: Jonathan\n  The Rest: (Aayan & Jason)\n+ Gemini\n+ Chatgpt\n\nSounds:\n- Idk\n- End credits music:  Moodmode - Pixabay.com\n- Main menu music:  Musicinmedia - Pixabay.com\n- Platformer stage 1 music: Boons_freak - Pixabay.com\n- Platformer stage 2 music: lesiakower - - Pixabay.com\n- Jumping sound: ExistenialTaco - Pixabay.com\n- Dashing sound: Dragon-studio - Pixabay.com\n- Platformer death sound: FreeSoundCommunity - Pixabay.com\n- Explosion sounds - creatorassets.com\n- The rest of the sounds: Jason\n\nThe end",
+      "font": "",
+      "textAlignment": "left",
+      "characterSize": 20,
+      "color": {
+        "b": 235,
+        "g": 247,
+        "r": 194
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": true,
+        "italic": false,
+        "outlineColor": "74;144;226",
+        "outlineThickness": 1,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "189;16;224",
+        "shadowDistance": 2,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Credits\n\nGame Made By: \nJonathan, Aayan, Jason\n\nAssets:\n- The worm: Jonathan\n- The player: Jonathan\n  The Rest: (Aayan & Jason)\n+ Gemini\n+ Chatgpt\n\nSounds:\n- Idk\n- End credits music:  Moodmode - Pixabay.com\n- Main menu music:  Musicinmedia - Pixabay.com\n- Platformer stage 1 music: Boons_freak - Pixabay.com\n- Platformer stage 2 music: lesiakower - - Pixabay.com\n- Jumping sound: ExistenialTaco - Pixabay.com\n- Dashing sound: Dragon-studio - Pixabay.com\n- Platformer death sound: FreeSoundCommunity - Pixabay.com\n- Explosion sounds - creatorassets.com\n- The rest of the sounds: Jason\n\nThe end",
+        "font": "",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "lineHeight": 0,
+        "color": "194;247;235"
+      }
     }
   ],
   "objectsFolderStructure": {
     "folderName": "__ROOT",
     "children": [
-      {
-        "objectName": "WinTitle"
-      },
       {
         "objectName": "NewTiledSprite"
       },
@@ -311,6 +313,9 @@
       },
       {
         "objectName": "NewSprite"
+      },
+      {
+        "objectName": "Credit_Text"
       }
     ]
   },
@@ -336,6 +341,53 @@
           "parameters": [
             "",
             "\"BossFight\"",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SceneJustBegins"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PlayMusic"
+          },
+          "parameters": [
+            "",
+            "moodmode-game-8-bit-on-278083.mp3",
+            "",
+            "20",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "Tween::TweenBehavior::AddObjectPositionYTween2"
+          },
+          "parameters": [
+            "Credit_Text",
+            "Tween",
+            "\"CreditsRolling\"",
+            "-500",
+            "\"linear\"",
+            "100",
             ""
           ]
         }

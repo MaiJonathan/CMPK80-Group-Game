@@ -51,6 +51,11 @@
       "name": "Count",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "BossDefeated",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [
@@ -1688,7 +1693,6 @@
       ]
     },
     {
-      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -1710,7 +1714,7 @@
             "",
             "1",
             "=",
-            "70"
+            "100"
           ]
         },
         {
@@ -2168,6 +2172,42 @@
             {
               "type": {
                 "value": "AdvancedJump::HorizontalDash::SimulateDashKey"
+              },
+              "parameters": [
+                "Player",
+                "HorizontalDash",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"LShift\""
+              ]
+            },
+            {
+              "type": {
+                "value": "AdvancedJump::HorizontalDash::IsDashing"
+              },
+              "parameters": [
+                "Player",
+                "HorizontalDash",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AdvancedJump::HorizontalDash::AbortDash"
               },
               "parameters": [
                 "Player",
@@ -6207,6 +6247,7 @@
           "comment": "Homing Projectile Attack"
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -6658,7 +6699,6 @@
           "comment": "Falling Triangles"
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -10767,17 +10807,6 @@
             "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
           },
           "parameters": [
-            "CopperRedBar",
-            "=",
-            "110-MusicChannelPlayingOffset(1)",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-          },
-          "parameters": [
             "BlueDotBar",
             "=",
             "Player.Health",
@@ -10787,7 +10816,34 @@
       ]
     },
     {
-      "folded": true,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "BossDefeated",
+            "False",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+          },
+          "parameters": [
+            "CopperRedBar",
+            "=",
+            "110-MusicChannelPlayingOffset(1)",
+            ""
+          ]
+        }
+      ]
+    },
+    {
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -10805,6 +10861,33 @@
       "actions": [
         {
           "type": {
+            "value": "SetBooleanVariable"
+          },
+          "parameters": [
+            "BossDefeated",
+            "True",
+            "="
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "BooleanVariable"
+          },
+          "parameters": [
+            "BossDefeated",
+            "True",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
             "value": "SetStringObjectVariable"
           },
           "parameters": [
@@ -10812,42 +10895,6 @@
             "CurrentAttack",
             "=",
             "\"falling\""
-          ]
-        },
-        {
-          "type": {
-            "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
-          },
-          "parameters": [
-            "FadeOut",
-            "FlashTransitionPainter",
-            "\"0;0;0\"",
-            "5",
-            "\"Circular\"",
-            "\"Forward\"",
-            "100",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "ResetTimer"
-          },
-          "parameters": [
-            "",
-            "\"TransitionTimer\""
-          ]
-        },
-        {
-          "type": {
-            "value": "CameraShake::ShakeCamera"
-          },
-          "parameters": [
-            "",
-            "5",
-            "1",
-            "1",
-            ""
           ]
         },
         {
@@ -10874,6 +10921,42 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"TransitionTimer\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
+              },
+              "parameters": [
+                "FadeOut",
+                "FlashTransitionPainter",
+                "\"0;0;0\"",
+                "5",
+                "\"Circular\"",
+                "\"Forward\"",
+                "100",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "CameraShake::ShakeCamera"
+              },
+              "parameters": [
+                "",
+                "5",
+                "1",
+                "1",
+                ""
+              ]
+            },
             {
               "type": {
                 "value": "PlaySound"

@@ -426,14 +426,6 @@
         }
       },
       {
-        "file": "assets/CoverPage.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\CoverPage.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "assets/IMG_0194.JPG",
         "kind": "image",
         "metadata": "",
@@ -478,14 +470,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\IMG_0192_resized.JPG",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "file": "assets/CoverPage2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\CoverPage2.png",
         "smoothed": true,
         "userAdded": false
       },
@@ -624,6 +608,24 @@
         "kind": "audio",
         "metadata": "",
         "name": "lesiakower-battle-time-178551.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Gemini_Generated_Image_w2zjqmw2zjqmw2zj.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Gemini_Generated_Image_w2zjqmw2zjqmw2zj2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "assets/moodmode-game-8-bit-on-278083.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "moodmode-game-8-bit-on-278083.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,

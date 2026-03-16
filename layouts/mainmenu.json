@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.5653158055126322,
+    "zoomFactor": 0.4481978045410368,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -28,23 +28,6 @@
   "objectsGroups": [],
   "variables": [],
   "instances": [
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 950,
-      "keepRatio": true,
-      "layer": "",
-      "name": "NewTiledSprite",
-      "persistentUuid": "c724c45e-9527-4042-8965-52cb0348ff5a",
-      "width": 1535,
-      "x": -131,
-      "y": -103,
-      "zOrder": 2,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
     {
       "angle": 0,
       "customSize": true,
@@ -145,21 +128,26 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 750,
+      "keepRatio": true,
+      "layer": "",
+      "name": "CoverPage",
+      "persistentUuid": "7e58e402-c8b4-4965-a994-bc23022637b1",
+      "width": 1511,
+      "x": -106,
+      "y": -24,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
-    {
-      "assetStoreId": "",
-      "height": 32,
-      "name": "NewTiledSprite",
-      "persistentUuid": "5fc3b613-2311-4b06-b91f-07db2f4cec6b",
-      "texture": "assets\\CoverPage.png",
-      "type": "TiledSpriteObject::TiledSprite",
-      "width": 32,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
     {
       "assetStoreId": "",
       "height": 32,
@@ -319,13 +307,74 @@
         }
       ],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "CoverPage",
+      "persistentUuid": "20b21d99-d42e-400e-b4a1-cb3216bafb3e",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Gemini_Generated_Image_w2zjqmw2zjqmw2zj2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 2528,
+                        "y": 0
+                      },
+                      {
+                        "x": 2528,
+                        "y": 1684
+                      },
+                      {
+                        "x": 0,
+                        "y": 1684
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
     "folderName": "__ROOT",
     "children": [
       {
-        "objectName": "NewTiledSprite"
+        "objectName": "CoverPage"
       },
       {
         "objectName": "NewTiledSprite2"

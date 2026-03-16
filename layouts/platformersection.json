@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.6455105703312012,
+    "zoomFactor": 0.6040838749989372,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -3743,6 +3743,42 @@
               },
               "parameters": [
                 "Dash_Text",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"LShift\""
+              ]
+            },
+            {
+              "type": {
+                "value": "AdvancedJump::HorizontalDash::IsDashing"
+              },
+              "parameters": [
+                "Player",
+                "HorizontalDash",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AdvancedJump::HorizontalDash::AbortDash"
+              },
+              "parameters": [
+                "Player",
+                "HorizontalDash",
                 ""
               ]
             }
