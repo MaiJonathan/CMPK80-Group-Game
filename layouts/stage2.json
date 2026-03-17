@@ -20,7 +20,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.9934433498259811,
+    "zoomFactor": 0.26364576737708645,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
@@ -365,8 +365,8 @@
       "name": "HitCount",
       "persistentUuid": "62de7c61-691d-4a41-887e-d7990802ff0b",
       "width": 0,
-      "x": -635,
-      "y": -470,
+      "x": -628,
+      "y": -354,
       "zOrder": 12,
       "numberProperties": [],
       "stringProperties": [],
@@ -5872,16 +5872,6 @@
                         "",
                         "\"InvincTimer\""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "HitsTaken",
-                        "+",
-                        "1"
-                      ]
                     }
                   ]
                 },
@@ -6321,7 +6311,6 @@
           "comment": "Homing Projectile Attack"
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -6690,16 +6679,6 @@
                   "parameters": [
                     "",
                     "\"InvincTimer\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "HitsTaken",
-                    "+",
-                    "1"
                   ]
                 }
               ]
@@ -10782,16 +10761,6 @@
             "Player",
             "\"255;100;100\""
           ]
-        },
-        {
-          "type": {
-            "value": "SetNumberVariable"
-          },
-          "parameters": [
-            "HitsTaken",
-            "+",
-            "1"
-          ]
         }
       ]
     },
@@ -10878,6 +10847,16 @@
             "\"Stage2\"",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "Attempts",
+            "+",
+            "1"
+          ]
         }
       ]
     },
@@ -10916,7 +10895,7 @@
             "HitCount",
             "Text",
             "=",
-            "\"Hits Taken: \" + HitsTaken"
+            "\"Attempts: \" + Attempts"
           ]
         }
       ]

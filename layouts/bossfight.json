@@ -6170,16 +6170,6 @@
                 "",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "HitsTaken",
-                "+",
-                "1"
-              ]
             }
           ]
         },
@@ -6444,16 +6434,6 @@
                 "",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "HitsTaken",
-                "+",
-                "1"
-              ]
             }
           ]
         },
@@ -6492,6 +6472,16 @@
                 "",
                 "\"BossFight\"",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Attempts",
+                "+",
+                "1"
               ]
             }
           ]
@@ -6980,7 +6970,7 @@
             "HitCount",
             "Text",
             "=",
-            "\"Hits Taken: \" + HitsTaken"
+            "\"Attempts: \" + Attempts"
           ]
         }
       ]

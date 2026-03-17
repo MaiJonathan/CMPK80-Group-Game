@@ -7126,7 +7126,7 @@
             "HitCount",
             "Text",
             "=",
-            "\"Hits Taken: \" + HitsTaken"
+            "\"Attempts: \" + Attempts"
           ]
         },
         {
@@ -7134,7 +7134,7 @@
             "value": "SetNumberVariable"
           },
           "parameters": [
-            "HitsTaken",
+            "Attempts",
             "+",
             "1"
           ]

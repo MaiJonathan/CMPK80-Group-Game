@@ -991,7 +991,7 @@
   "objectsGroups": [],
   "variables": [
     {
-      "name": "HitsTaken",
+      "name": "Attempts",
       "type": "number",
       "value": 0
     }
